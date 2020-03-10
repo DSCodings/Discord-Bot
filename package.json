@@ -1,0 +1,30 @@
+{
+  "name": "terminal",
+  "version": "1.0.0",
+  "description": "Een Discord bot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Daan",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "ms": "^2.1.2",
+    "node-opus": "^0.3.3",
+    "opusscript": "0.0.7",
+    "uninstall": "0.0.0",
+    "ytdl-core": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Een bot."
+  }
+}
