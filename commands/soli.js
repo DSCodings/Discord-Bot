@@ -47,7 +47,7 @@ module.exports.run = async(bot, message, args) => {
             });
             var embedParent = new discord.RichEmbed()
                 .setTitle("Hoi, " + message.author.username.toString())
-                .setDescription("Beantwoor de onderstaande vragen: \n 1. Hoe oud ben jij? \n 2. Hoe vaak kom je online? \n 3. Ben je nog ergens anders staf? \n vertel iets over jezelf.");
+                .setDescription("Beantwoor de onderstaande vragen: \n 1. Hoe oud ben jij? \n 2. Hoe vaak kom je online? \n 3. Ben je nog ergens anders staf? \n 4.vertel iets over jezelf.");
  
             settedParent.send(embedParent);
         }).catch(err => {
