@@ -21,6 +21,7 @@ module.exports.run = async(bot, message, arguments) => {
         .addField("baned user", banUser)
         .addField("baned by", message.author)
         .addField("reason", reason)
+        .setTimestamp()
         .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     var banchannel = message.guild.channels.find(`name`, "logs");

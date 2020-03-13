@@ -16,6 +16,7 @@ module.exports.run = async (bot, message, args) => {
             .setTitle("Gebruik")
             .setColor("#00ee00")
             .setDescription(`Maak een announcement door gebruik te maken van: \n !announcement Titel ${splitser} Bericht ${splitser} Kleur ${splitser} Kanaal`)
+            .setTimestamp()
             .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
         return message.channel.send(useMessage);
