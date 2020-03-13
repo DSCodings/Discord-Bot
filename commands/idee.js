@@ -14,6 +14,7 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#00FF00")
         .addField("Idea: ", idee)
         .addField("Submitted by: ", message.author)
+        .setTimestamp()
         .setFooter('Mady by jan0de0man', message.guild.iconURL);
  
     // Vind het kanaal.

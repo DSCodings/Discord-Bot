@@ -20,6 +20,7 @@ module.exports.run = async(bot, message, args) => {
       .setColor("#ff0000")
       .setTitle("prefix")
       .setDescription(`Prefix adjusted to ${args[0]}`)
+      .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
     //.setThumbnail(icon);
 

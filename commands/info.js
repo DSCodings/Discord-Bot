@@ -10,6 +10,7 @@ module.exports.run = async(bot, message, args) => {
       .setThumbnail(botIcon)
       .addField("Bot name", bot.user.username)
       .addField("made on", bot.user.createdAt)
+      .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
     return message.channel.send(botEmbed);
 }

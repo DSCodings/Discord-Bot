@@ -23,6 +23,7 @@ module.exports.run = async(bot, message, arguments) => {
         .addField("kicked user", kickUser)
         .addField("kicked by", message.author)
         .addField("reason", reason)
+        .setTimestamp()
         .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     var kickchannel = message.guild.channels.find(`name`, "logs");

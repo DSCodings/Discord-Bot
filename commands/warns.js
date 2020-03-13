@@ -50,6 +50,7 @@ module.exports.run = async(bot, message, args) => {
             .setColor("#f0982e")
             .setThumbnail(icon)
             .addField("watch out", "1 more warn and you have a ban.")
+            .setTimestamp()
             .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
         message.channel.send(warnbericht);

@@ -34,6 +34,7 @@ module.exports.run = async (bot, message, args) => {
         .setThumbnail(message.guild.iconURL)
         .addField("Sterren:", `${sterren}`)
         .addField("Review:", `${bericht}`)
+        .setTimestamp()
         .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     // Zend bericht naar de gebruiker dat hij een review heeft aangemaakt.

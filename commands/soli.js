@@ -25,6 +25,7 @@ module.exports.run = async(bot, message, args) => {
         .setDescription("ticket")
         .setTitle("hi, " + message.author.username)
         .setFooter(`You have created a ticket.`)
+        .setTimestamp()
         .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     message.channel.send(embedCreateTicket);

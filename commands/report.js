@@ -22,6 +22,7 @@ module.exports.run = async(bot, message, args) => {
     .addField("Report through", `${message.author} with the ID ${message.author.id}`)
     .addField("reason", reason)
     .setFooter(message.createdAt)
+    .setTimestamp()
     .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
 var channelReport = message.guild.channels.find("name", "logs");
