@@ -24,7 +24,8 @@ module.exports.run = async(bot, message, args) => {
     var embedCreateTicket = new discord.RichEmbed()
         .setDescription("ticket")
         .setTitle("hi, " + message.author.username)
-        .setFooter(`You have created a ticket.`);
+        .setFooter(`You have created a ticket.`)
+        .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     message.channel.send(embedCreateTicket);
 

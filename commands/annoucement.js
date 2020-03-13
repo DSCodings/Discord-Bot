@@ -15,7 +15,8 @@ module.exports.run = async (bot, message, args) => {
         var useMessage = new discord.RichEmbed()
             .setTitle("Gebruik")
             .setColor("#00ee00")
-            .setDescription(`Maak een announcement door gebruik te maken van: \n !announcement Titel ${splitser} Bericht ${splitser} Kleur ${splitser} Kanaal`);
+            .setDescription(`Maak een announcement door gebruik te maken van: \n !announcement Titel ${splitser} Bericht ${splitser} Kleur ${splitser} Kanaal`)
+            .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
         return message.channel.send(useMessage);
 

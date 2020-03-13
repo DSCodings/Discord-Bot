@@ -21,7 +21,8 @@ module.exports.run = async(bot, message, args) => {
     .addField("Reported user", `${user} with ID ${user.id}`)
     .addField("Report through", `${message.author} with the ID ${message.author.id}`)
     .addField("reason", reason)
-    .setFooter(message.createdAt);
+    .setFooter(message.createdAt)
+    .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
 var channelReport = message.guild.channels.find("name", "logs");
 if (!channelReport) return message.channel.send("Kan het kanaal niet vinden");

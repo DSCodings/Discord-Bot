@@ -18,7 +18,9 @@ module.exports.run = async(bot, message, args) => {
     var embedCloseTicket = new discord.RichEmbed()
         .setTitle("hi, " + message.channel.name)
         .setDescription("Your ticket is marked as ** complete **. If you want to make a new one, do <prefix>Ticket.")
-        .setFooter(`You have deleted a ticket.`);
+        .setFooter(`You have deleted a ticket.`)
+        .setFooter('Mady by jan0de0man', message.guild.iconURL);
+        
 
         var logChannel = message.guild.channels.find("name", "logs");
 

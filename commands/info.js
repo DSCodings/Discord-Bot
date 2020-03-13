@@ -9,7 +9,8 @@ module.exports.run = async(bot, message, args) => {
       .setColor("#29e53f")
       .setThumbnail(botIcon)
       .addField("Bot name", bot.user.username)
-      .addField("made on", bot.user.createdAt);
+      .addField("made on", bot.user.createdAt)
+      .setFooter('Mady by jan0de0man', message.guild.iconURL);
     return message.channel.send(botEmbed);
 }
 

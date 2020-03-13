@@ -36,7 +36,8 @@ module.exports.run = async(bot, message, args) => {
         .addField("warn user", user)
         .addField("warned by", message.author)
         .addField("number of warns", warns[user.id].warns)
-        .addField("reason", reason);
+        .addField("reason", reason)
+        .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     var warnchannel = message.guild.channels.find(`name`, "logs");
     if(!warnchannel) return message.guild.send("Cannot find the channel");
@@ -48,7 +49,8 @@ module.exports.run = async(bot, message, args) => {
             .setDescription("beware")
             .setColor("#f0982e")
             .setThumbnail(icon)
-            .addField("watch out", "1 more warn and you have a ban.");
+            .addField("watch out", "1 more warn and you have a ban.")
+            .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
         message.channel.send(warnbericht);
     }else if (warns[user.id].warns == 5) {

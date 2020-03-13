@@ -13,7 +13,7 @@ module.exports.run = async(bot, message, args) => {
       .addField("Bot naam", bot.user.username)
       .addField("you are joined on", message.member.joinedAt)
       .addField("membres", message.guild.memberCount)
-      .setFooter('Mady by jan0de0man', Icon);
+      .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
 
     return message.channel.send(serverEmbed);

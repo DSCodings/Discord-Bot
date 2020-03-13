@@ -33,7 +33,8 @@ module.exports.run = async (bot, message, args) => {
         .setColor("#00ff00")
         .setThumbnail(message.guild.iconURL)
         .addField("Sterren:", `${sterren}`)
-        .addField("Review:", `${bericht}`);
+        .addField("Review:", `${bericht}`)
+        .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     // Zend bericht naar de gebruiker dat hij een review heeft aangemaakt.
     message.channel.send(":white_check_mark: Je hebt succesvol een review geschreven!");

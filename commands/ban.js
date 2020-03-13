@@ -20,7 +20,8 @@ module.exports.run = async(bot, message, arguments) => {
         .setThumbnail(icon)
         .addField("baned user", banUser)
         .addField("baned by", message.author)
-        .addField("reason", reason);
+        .addField("reason", reason)
+        .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     var banchannel = message.guild.channels.find(`name`, "logs");
     if(!banchannel) return message.guild.send("Cannot find the channel");

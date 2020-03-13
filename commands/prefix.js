@@ -19,7 +19,8 @@ module.exports.run = async(bot, message, args) => {
     var stringEmbed = new discord.RichEmbed()
       .setColor("#ff0000")
       .setTitle("prefix")
-      .setDescription(`Prefix adjusted to ${args[0]}`);
+      .setDescription(`Prefix adjusted to ${args[0]}`)
+      .setFooter('Mady by jan0de0man', message.guild.iconURL);
     //.setThumbnail(icon);
 
     message.channel.send(stringEmbed);

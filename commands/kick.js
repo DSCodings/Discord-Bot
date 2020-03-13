@@ -22,7 +22,8 @@ module.exports.run = async(bot, message, arguments) => {
         .setThumbnail(icon)
         .addField("kicked user", kickUser)
         .addField("kicked by", message.author)
-        .addField("reason", reason);
+        .addField("reason", reason)
+        .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
     var kickchannel = message.guild.channels.find(`name`, "logs");
     if(!kickchannel) return message.guild.send("Cannot find the channel");

@@ -13,7 +13,8 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("New Idea")
         .setColor("#00FF00")
         .addField("Idea: ", idee)
-        .addField("Submitted by: ", message.author);
+        .addField("Submitted by: ", message.author)
+        .setFooter('Mady by jan0de0man', message.guild.iconURL);
  
     // Vind het kanaal.
     var ideeChannel = message.guild.channels.find(`name`, "ideeen");
