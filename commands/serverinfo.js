@@ -12,7 +12,8 @@ module.exports.run = async(bot, message, args) => {
       .setThumbnail(Icon)
       .addField("Bot naam", bot.user.username)
       .addField("you are joined on", message.member.joinedAt)
-      .addField("membres", message.guild.memberCount);
+      .addField("membres", message.guild.memberCount)
+      .setFooter('Mady by jan0de0man', Icon);
 
 
     return message.channel.send(serverEmbed);
