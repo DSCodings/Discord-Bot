@@ -11,7 +11,7 @@ module.exports.run = async(bot, message, args) => {
     // Kijk na als er een idee is meegegeven.
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don't have the permission for that.");
     if (!nickname) return message.channel.send("<prefix>nicknamechange (New nickname)");
-    message.guild.members.get(bot.user.id).setNickname(nickname);
+    message.guild.members.get(changenameUser).setNickname(nickname);
 
     var nicknameEmbed =  new discord.RichEmbed()
       .setDescription("nick name successful changed")
