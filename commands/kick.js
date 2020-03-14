@@ -2,7 +2,7 @@ const discord = require("discord.js");
 //const fs = require("fs");
 
 module.exports.run = async(bot, message, arguments) => {
-    var kickUser = message.guild.member(message.mentions.users.first() || message.guild.members(arguments[0]));
+    var kickUser = message.guild.member(message.mentions.users.first() || message.guild.member(arguments[0]));
 
     if (!kickUser) return message.channel.send("use was not found");
 
