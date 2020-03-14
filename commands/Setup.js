@@ -11,7 +11,7 @@ module.exports.run = async(bot, message, args) => {
     var setupEmbed =  new discord.RichEmbed()
       .setDescription("bot name successful changed")
       .setColor("#29e53f")
-      .setThumbnail(Icon)
+      .setThumbnail(message.guild.iconURL)
       .addField("Bot name successful changed to:", botname)
       .addField("Do <prefix>help for more commands")
       .setTimestamp()
