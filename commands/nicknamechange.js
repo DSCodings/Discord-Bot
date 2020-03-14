@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args) => {
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don't have the permission for that.");
 
-    var changenameUser = message.guild.member(message.mentions.users.first() || message.guild.members(arguments[0]));
+    var changenameUser = message.guild.member(message.mentions.users.first() || message.guild.members(args[0]));
 
     if (!changenameUser) return message.channel.send("use was not found");
 
