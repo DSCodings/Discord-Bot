@@ -6,16 +6,18 @@ module.exports.run = async(bot, message, args) => {
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don't have the permission for that.");
 
-    var changenameUser = message.guild.member(message.mentions.users.first() || message.guild.members(args[0]));
+    var changenameUser = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
 
     if (!changenameUser) return message.channel.send("use was not found");
 
 
     var nickname = args.join(" ").slice(22);
  
-    // Kijk na als er een idee is meegegeven.
+   
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don't have the permission for that.");
+
     if (!nickname) return message.channel.send("<prefix>nicknamechange (New nickname)");
+    
     message.guild.members.get(changenameUser).setNickname(nickname);
 
     var nicknameEmbed =  new discord.RichEmbed()
@@ -35,5 +37,5 @@ module.exports.run = async(bot, message, args) => {
 
 module.exports.help = {
     name: "nicknamechange",
-    description: "for change the nick name af a player"
+    description: "for change the nickname af a player"
 }
