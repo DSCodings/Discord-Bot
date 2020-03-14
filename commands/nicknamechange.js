@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
 
     var changenameUser = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
 
-    if (!changenameUser) return message.channel.send("use was not found");
+    if (!changenameUser) return message.channel.send("user was not found");
 
 
     var nickname = args.join(" ").slice(22);
@@ -18,7 +18,7 @@ module.exports.run = async(bot, message, args) => {
 
     if (!nickname) return message.channel.send("<prefix>nicknamechange (New nickname)");
     
-    message.guild.members.get(changenameUser).setNickname(nickname);
+    message.guild.members.get(changenameUser[user.id]).setNickname(nickname);
 
     var nicknameEmbed =  new discord.RichEmbed()
       .setDescription("nick name successful changed")
