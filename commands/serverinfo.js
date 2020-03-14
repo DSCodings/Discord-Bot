@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
       .setDescription("Server info")
       .setColor("#29e53f")
       .setThumbnail(Icon)
-      .addField("Bot naam", bot.user.username)
+      .addField("Bot name", bot.user.username)
       .addField("you are joined on", message.member.joinedAt)
       .addField("membres", message.guild.memberCount)
       .setTimestamp()
