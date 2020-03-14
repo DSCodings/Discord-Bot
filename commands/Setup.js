@@ -4,6 +4,7 @@ module.exports.run = async(bot, message, args) => {
     var botname = args.join(" ");
  
     // Kijk na als er een idee is meegegeven.
+    if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don't have the permission for that.");
     if (!botname) return message.channel.send("<prefix>setup (New bot name)");
     message.guild.members.get(bot.user.id).setNickname(botname)
 }
