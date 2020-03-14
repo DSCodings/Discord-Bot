@@ -13,7 +13,7 @@ module.exports.run = async(bot, message, args) => {
       .setColor("#29e53f")
       .setThumbnail(Icon)
       .addField("Bot name successful changed to:", botname)
-      .addField("Do <prefix>help for more commands",)
+      .addField("Do <prefix>help for more commands")
       .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
