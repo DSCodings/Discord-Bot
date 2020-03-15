@@ -74,36 +74,36 @@ bot.on("guildMemberRemove", member => {
 
 });
 
-bot.on('guildBanAdd', member => {
-  const channel123 = member.guild.channels.find("name", "logs");
-  if (!channel123) console.log("Kan het kanaal niet vinden.");
+// bot.on('guildBanAdd', member => {
+//   const channel123 = member.guild.channels.find("name", "logs");
+//   if (!channel123) console.log("Kan het kanaal niet vinden.");
 
-  var joinEmbed = new discord.RichEmbed()
-      .setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
-      .setDescription(`${member.user.username}, **has banned**.`)
-      .setColor("#00FF00")
-      .setTimestamp()
-      .setFooter("User joined.");
+//   var joinEmbed = new discord.RichEmbed()
+//       .setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
+//       .setDescription(`${member.user.username}, **has banned**.`)
+//       .setColor("#00FF00")
+//       .setTimestamp()
+//       .setFooter("User joined.");
 
-  channel123.send(joinEmbed);
+//   channel123.send(joinEmbed);
 	
-});
-bot.on('messageDelete', member => {
-  const channel1234 = member.guild.channels.find("name", "logs");
-  if (!channel1234) console.log("Kan het kanaal niet vinden.");
+// });
+// bot.on('messageDelete', member => {
+//   const channel1234 = member.guild.channels.find("name", "logs");
+//   if (!channel1234) console.log("Kan het kanaal niet vinden.");
 
-  var joinEmbed = new discord.RichEmbed()
-      .setAuthor(`${message.author.tag}`, member.user.displayAvatarURL)
-      .setDescription(`${message.author.tag}, **has deleted: ${executor.tag}.**.`)
-      .setColor("#fcba03")
-      .setTimestamp()
-      .setFooter("User joined.");
+//   var joinEmbed = new discord.RichEmbed()
+//       .setAuthor(`${message.author.tag}`, member.user.displayAvatarURL)
+//       .setDescription(`${message.author.tag}, **has deleted: ${executor.tag}.**.`)
+//       .setColor("#fcba03")
+//       .setTimestamp()
+//       .setFooter("User joined.");
 
-  channel1234.send(joinEmbed);
+//   channel1234.send(joinEmbed);
 
-});
+// });
 
-//var swearWord = ["koe","kalf"];
+// //var swearWord = ["koe","kalf"];
 
 
 bot.on("message", async message => {
