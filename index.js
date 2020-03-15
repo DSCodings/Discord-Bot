@@ -74,7 +74,7 @@ bot.on("guildMemberRemove", member => {
 
 });
 
-client.on('guildBanAdd', async (guild, user) => {
+client.on('guildBanAdd', member => {
   const channel123 = member.guild.channels.find("name", "logs");
   if (!channel123) console.log("Kan het kanaal niet vinden.");
 
@@ -88,7 +88,7 @@ client.on('guildBanAdd', async (guild, user) => {
   channel123.send(joinEmbed);
 	
 });
-client.on('messageDelete', async message => {
+client.on('messageDelete', member => {
   const channel1234 = member.guild.channels.find("name", "logs");
   if (!channel1234) console.log("Kan het kanaal niet vinden.");
 
