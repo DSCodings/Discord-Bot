@@ -79,7 +79,7 @@ bot.on('guildBanAdd', member => {
   if (!channel123) console.log("Kan het kanaal niet vinden.");
 
   var joinEmbed = new discord.RichEmbed()
-      .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+      .setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
       .setDescription(`${member.user.username}, **has banned**.`)
       .setColor("#00FF00")
       .setTimestamp()
@@ -93,8 +93,8 @@ bot.on('messageDelete', member => {
   if (!channel1234) console.log("Kan het kanaal niet vinden.");
 
   var joinEmbed = new discord.RichEmbed()
-      .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-      .setDescription(`${member.user.username}, **has deleted: ${executor.tag}.**.`)
+      .setAuthor(`${message.author.tag}`, member.user.displayAvatarURL)
+      .setDescription(`${message.author.tag}, **has deleted: ${executor.tag}.**.`)
       .setColor("#fcba03")
       .setTimestamp()
       .setFooter("User joined.");
