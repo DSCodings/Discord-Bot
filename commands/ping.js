@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
-    message.channel.send("pong: " + (message.createdTimestamp - Date.now()) + "ms")
+    message.channel.send("pong: " + (Date.now() - message.createdTimestamp) + "ms")
 }
 
 module.exports.help = {

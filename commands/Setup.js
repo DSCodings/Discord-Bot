@@ -20,7 +20,6 @@ module.exports.run = async(bot, message, args) => {
 
     return message.channel.send(setupEmbed);
 
-
 }
 
 module.exports.help = {
