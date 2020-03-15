@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
      
-            var text = "**Terminal bot** \n\n **__Update Log__** \n -setup added, For setup the bot \n -nickmanechange added \n -update log added";
+            var text = "**Terminal bot** \n\n **__Update Log__** \n -setup added, For setup the bot \n -nickmanechange added \n -update log added \n -usercount added";
       
            // message.author.send(text);
       

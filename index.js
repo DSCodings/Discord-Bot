@@ -35,10 +35,7 @@ bot.on("guildMemberAdd", member => {
   var role = member.guild.roles.find("name", "burger van heerlen");
 
 
-  if (!role) return;
-
-  member.addRole(role);
-
+  
   const channel = member.guild.channels.find("name", "welkom");
 
   if (!channel) return;
@@ -55,6 +52,11 @@ bot.on("guildMemberAdd", member => {
         .setFooter("User joined.");
  
     channel12.send(joinEmbed);
+
+    if (!role) return;
+
+   member.addRole(role);
+
 });
 
 bot.on("guildMemberRemove", member => {
@@ -69,6 +71,35 @@ bot.on("guildMemberRemove", member => {
       .setFooter("User leaved.");
 
   channel1.send(leaveEmbed);
+
+});
+
+client.on('guildBanAdd', async (guild, user) => {
+  const channel123 = member.guild.channels.find("name", "logs");
+  if (!channel123) console.log("Kan het kanaal niet vinden.");
+
+  var joinEmbed = new discord.RichEmbed()
+      .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+      .setDescription(`${member.user.username}, **has banned**.`)
+      .setColor("#00FF00")
+      .setTimestamp()
+      .setFooter("User joined.");
+
+  channel123.send(joinEmbed);
+	
+});
+client.on('messageDelete', async message => {
+  const channel1234 = member.guild.channels.find("name", "logs");
+  if (!channel1234) console.log("Kan het kanaal niet vinden.");
+
+  var joinEmbed = new discord.RichEmbed()
+      .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+      .setDescription(`${member.user.username}, **has deleted: ${executor.tag}.**.`)
+      .setColor("#fcba03")
+      .setTimestamp()
+      .setFooter("User joined.");
+
+  channel1234.send(joinEmbed);
 
 });
 
