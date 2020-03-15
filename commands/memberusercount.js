@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
       .setDescription("usercount")
       .setColor("#29e53f")
       .setThumbnail(message.guild.iconURL)
-      .addField("Membres:", message.guild.memberCount)
+      .addField("Membres:", message.guild.memberCount, message.memberCount.name)
       .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
