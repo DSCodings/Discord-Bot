@@ -99,7 +99,7 @@ bot.on("messageDelete", (messageDelete) => {
   .setTimestamp()
   .setFooter('Mady by jan0de0man');
 
-  messageDelete.channel12.send(joinEmbed22);
+  channel12.send(joinEmbed22);
 
   //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
  });
