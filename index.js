@@ -89,7 +89,7 @@ bot.on("guildBanAdd", member => {
 	
 });
 
-client.on("messageDelete", (messageDelete) => {
+bot.on("messageDelete", (messageDelete) => {
   messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
  });
 
