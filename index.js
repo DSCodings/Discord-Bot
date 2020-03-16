@@ -89,9 +89,9 @@ bot.on("guildMemberRemove", member => {
 // });
 
 bot.on("messageDelete", (messageDelete) => {
-  const channel12345 = member.guild.channels.find("name", "logs");
+  //const channel12345 = member.guild.channels.find("name", "logs");
 
-  if (!channel12345) console.log("Kan het kanaal niet vinden.");
+  if (!channel12) console.log("Kan het kanaal niet vinden.");
   var joinEmbed22 = new discord.RichEmbed()
   //.setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
   .setDescription(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted..`)
@@ -99,7 +99,7 @@ bot.on("messageDelete", (messageDelete) => {
   .setTimestamp()
   .setFooter('Mady by jan0de0man');
 
-  messageDelete.channel12345.send(joinEmbed22);
+  messageDelete.channel12.send(joinEmbed22);
 
   //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
  });
