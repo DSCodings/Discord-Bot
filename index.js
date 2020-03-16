@@ -71,7 +71,6 @@ bot.on("guildMemberRemove", member => {
       .setFooter("User leaved.");
 
   channel1.send(leaveEmbed);
-  https://www.youtube.com/watch?v=A0sKdmReFxI
 });
 
 // bot.on("guildBanAdd", member => {
@@ -90,14 +89,17 @@ bot.on("guildMemberRemove", member => {
 // });
 
 bot.on("messageDelete", (messageDelete) => {
-  var joinEmbed = new discord.RichEmbed()
+  const channel12345 = member.guild.channels.find("name", "logs");
+
+  if (!channel12345) console.log("Kan het kanaal niet vinden.");
+  var joinEmbed22 = new discord.RichEmbed()
   //.setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
   .setDescription(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted..`)
   .setColor("#00FF00")
   .setTimestamp()
   .setFooter('Mady by jan0de0man');
 
-  messageDelete.channel.send(joinEmbed);
+  messageDelete.channel12345.send(joinEmbed22);
 
   //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
  });
@@ -106,9 +108,9 @@ bot.on("messageDelete", (messageDelete) => {
 //   //const channel1239 = member.guild.channels.find("name", "logs");
 // 	channel.send(`${user.tag} got hit with the swift hammer of justice in the guild ${guild.name}.`);
 // });
-// bot.on("messageUpdate", (messageDelete) => {
-
-// }
+// bot.on("messageUpdate", async(oldMessage, newMessage) => {
+//   if(oldMessage.content === newMessage.content)
+// });
 
 
 
