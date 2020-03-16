@@ -102,10 +102,10 @@ bot.on("messageDelete", (messageDelete) => {
   //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
  });
 
- bot.on("guildBanAdd", member => {
-  //const channel1239 = member.guild.channels.find("name", "logs");
-	channel.send(`${user.tag} got hit with the swift hammer of justice in the guild ${guild.name}.`);
-});
+//  bot.on("guildBanAdd", member => {
+//   //const channel1239 = member.guild.channels.find("name", "logs");
+// 	channel.send(`${user.tag} got hit with the swift hammer of justice in the guild ${guild.name}.`);
+// });
 
 
 
