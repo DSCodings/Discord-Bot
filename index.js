@@ -88,7 +88,7 @@ bot.on("guildMemberRemove", member => {
 	
 // });
 
-bot.on("messageDelete", (messageDelete) => {
+bot.on("messageDelete", (messageDelete, member) => {
   const channel129 = member.guild.channels.find("name", "logs");
 
   if (!channel129) return console.log("Kan het kanaal niet vinden.");
