@@ -107,7 +107,7 @@ bot.on("messageDelete", (messageDelete) => {
 
   let DeleteEmbed = new discord.RichEmbed()
   .setTitle("**DELETED MESSAGE**")
-  .setThumbnail(oldMessage.author.avatarURL)
+  .setThumbnail(messageDelete.author.avatarURL)
   .setColor("#fc3c3c")
   .addField("Author", messageDelete.author.tag, true)
   .addField("Channel", messageDelete.channel, true)
