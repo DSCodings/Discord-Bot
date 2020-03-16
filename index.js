@@ -60,6 +60,7 @@ bot.on("guildMemberAdd", member => {
 });
 
 bot.on("guildMemberRemove", member => {
+  return;
  
   const channel1 = member.guild.channels.find("name", "logs");
   if (!channel1) console.log("Kan het kanaal niet vinden.");
