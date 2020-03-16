@@ -24,5 +24,5 @@ module.exports.run = async(bot, message, args) => {
 
 module.exports.help = {
     name: "userrolcount",
-    description: "for test the bot"
+    description: "for see the players at 1 roll"
 }
