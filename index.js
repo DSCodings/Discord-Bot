@@ -43,7 +43,7 @@ bot.on("guildMemberAdd", member => {
         .setDescription(`${member.user.username}, **joined the server**.`)
         .setColor("#00FF00")
         .setTimestamp()
-        .setFooter("User joined.");
+        .setFooter('Mady by jan0de0man');
  
     channel12.send(joinEmbed);
 
@@ -73,7 +73,7 @@ bot.on("guildMemberRemove", member => {
       .setDescription(`${member.user.username}, **Has left the server**.`)
       .setColor("#FF0000")
       .setTimestamp()
-      .setFooter('Mady by jan0de0man');;
+      .setFooter('Mady by jan0de0man');
 
   channel1.send(leaveEmbed);
 });
