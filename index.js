@@ -83,7 +83,8 @@ bot.on("guildBanAdd", (member) => {
   // if (!channel123) console.log("Kan het kanaal niet vinden.");
 
   var bannedEmbed = new discord.RichEmbed()
-      .setAuthor(`${message.author.tag}`, member.user.displayAvatarURL)
+      .setTitle("**USER BANNED**")
+      .setThumbnail(member.author.avatarURL)
       .setDescription(`${member.user.username}, **has banned**.`)
       .setColor("#00FF00")
       .setTimestamp()
@@ -99,13 +100,13 @@ bot.on("guildBanAdd", (member) => {
 bot.on("messageDelete", (messageDelete) => {
 
   let DeleteEmbed = new discord.RichEmbed()
-  .setTitle("**DELETED MESSAGE**")
-  .setThumbnail(messageDelete.author.avatarURL)
-  .setColor("#fc3c3c")
-  .addField("Author", messageDelete.author.tag, true)
-  .addField("Channel", messageDelete.channel, true)
-  .addField("Message", messageDelete.content)
-  .setFooter(`Message ID: ${messageDelete.id} | Author ID: ${messageDelete.author.id}`);
+    .setTitle("**DELETED MESSAGE**")
+    .setThumbnail(messageDelete.author.avatarURL)
+    .setColor("#fc3c3c")
+    .addField("Author", messageDelete.author.tag, true)
+    .addField("Channel", messageDelete.channel, true)
+    .addField("Message", messageDelete.content)
+    .setFooter(`Message ID: ${messageDelete.id} | Author ID: ${messageDelete.author.id}`);
 
   let DeleteChannel = messageDelete.guild.channels.find(x => x.name === "logs");
   DeleteChannel.send(DeleteEmbed);
