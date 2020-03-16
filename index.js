@@ -88,20 +88,25 @@ bot.on("guildBanAdd", member => {
   channel123.send(joinEmbed);
 	
 });
-bot.on("messageDelete", member => {
-  const channel12 = member.guild.channels.find("name", "logs");
-  if (!channel12) console.log("Kan het kanaal niet vinden.");
 
-  var joinEmbed = new discord.RichEmbed()
-      //.setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-      .setDescription(`${message.author.tag}, **joined the server**.`)
-      .setColor("#00FF00")
-      .setTimestamp()
-      .setFooter("User joined.");
+client.on("messageDelete", (messageDelete) => {
+  messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
+ });
 
-  channel12.send(joinEmbed)
+// bot.on("messageDelete", member => {
+//   const channel12 = member.guild.channels.find("name", "logs");
+//   if (!channel12) console.log("Kan het kanaal niet vinden.");
 
-});
+//   var joinEmbed = new discord.RichEmbed()
+//       //.setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+//       .setDescription(`${message.author.tag}, **joined the server**.`)
+//       .setColor("#00FF00")
+//       .setTimestamp()
+//       .setFooter("User joined.");
+
+//   channel12.send(joinEmbed)
+
+// });
 
 // //var swearWord = ["koe","kalf"];
 
