@@ -121,9 +121,28 @@ bot.on("messageDelete", (messageDelete) => {
 //   //const channel1239 = member.guild.channels.find("name", "logs");
 // 	channel.send(`${user.tag} got hit with the swift hammer of justice in the guild ${guild.name}.`);
 // });
-// bot.on("messageUpdate", async(oldMessage, newMessage) => {
-//   if(oldMessage.content === newMessage.content)
-// });
+bot.on("messageUpdate", async(oldMessage, newMessage) => {
+  if(oldMessage.content === newMessage.content){
+    return;
+  }
+  let LOGEmbed = new discord.RichEmbed()
+  .setAuthor(oldMessage.author.tag, oldMessage.author.avatarURL)
+  .setThumbnail(oldMessage.author.avatarURL)
+  .setColor("#ff6a00")
+  .setDescription("**MESSAGE EDITED**")
+  .addField("Before", oldMessage.content, true)
+  .addField("after", newMessage.content, true)
+  .setTimestamp()
+  .setFooter('Mady by jan0de0man');
+
+  let loggingCHannel = newMessage.guild.channels.find(ch => ch.name === "logs");
+  if(!loggingCHannel) return console.log("Kan het kanaal niet vinden.");
+
+  loggingCHannel.send(LOGEmbed);
+
+
+
+});
 
 
 
