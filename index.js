@@ -71,7 +71,7 @@ bot.on("guildMemberRemove", member => {
       .setFooter("User leaved.");
 
   channel1.send(leaveEmbed);
-
+  https://www.youtube.com/watch?v=A0sKdmReFxI
 });
 
 // bot.on("guildBanAdd", member => {
@@ -106,6 +106,9 @@ bot.on("messageDelete", (messageDelete) => {
 //   //const channel1239 = member.guild.channels.find("name", "logs");
 // 	channel.send(`${user.tag} got hit with the swift hammer of justice in the guild ${guild.name}.`);
 // });
+// bot.on("messageUpdate", (messageDelete) => {
+
+// }
 
 
 
