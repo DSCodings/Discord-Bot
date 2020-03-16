@@ -95,7 +95,7 @@ bot.on("messageDelete", (messageDelete) => {
   .setDescription(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted..`)
   .setColor("#00FF00")
   .setTimestamp()
-  .setFooter('Mady by jan0de0man', message.guild.iconURL);
+  .setFooter('Mady by jan0de0man');
 
   messageDelete.channel.send(joinEmbed);
 
