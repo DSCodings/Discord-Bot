@@ -89,17 +89,17 @@ bot.on("guildBanAdd", member => {
 	
 });
 bot.on("messageDelete", member => {
-  const channel1234 = member.guild.channels.find("name", "logs");
-  if (!channel1234) console.log("Kan het kanaal niet vinden.");
+  const channel12 = member.guild.channels.find("name", "logs");
+  if (!channel12) console.log("Kan het kanaal niet vinden.");
 
   var joinEmbed = new discord.RichEmbed()
-      //.setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-      .setDescription(`${member.user.username}, **has deleted: ${executor.tag}.**.`)
-      .setColor("#fcba03")
+      .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+      .setDescription(`${member.user.username}, **joined the server**.`)
+      .setColor("#00FF00")
       .setTimestamp()
       .setFooter("User joined.");
 
-  channel1234.send(joinEmbed);
+  channel12.send(joinEmbed)
 
 });
 
