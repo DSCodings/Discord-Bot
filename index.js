@@ -62,17 +62,17 @@ bot.on("guildMemberAdd", member => {
 bot.on("guildMemberRemove", member => {
   return;
  
-  const channel1 = member.guild.channels.find("name", "logs");
-  if (!channel1) console.log("Kan het kanaal niet vinden.");
+//   const channel1 = member.guild.channels.find("name", "logs");
+//   if (!channel1) console.log("Kan het kanaal niet vinden.");
 
-  var leaveEmbed = new discord.RichEmbed()
-      .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-      .setColor("#FF0000")
-      .setTimestamp()
-      .setFooter("User leaved.");
+//   var leaveEmbed = new discord.RichEmbed()
+//       .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+//       .setColor("#FF0000")
+//       .setTimestamp()
+//       .setFooter("User leaved.");
 
-  channel1.send(leaveEmbed);
-});
+//   channel1.send(leaveEmbed);
+// });
 
 // bot.on("guildBanAdd", member => {
 //   const channel123 = member.guild.channels.find("name", "logs");
