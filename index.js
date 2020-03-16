@@ -32,19 +32,13 @@ bot.on("ready", async () => {
 
 bot.on("guildMemberAdd", member => {
 
-  var role = member.guild.roles.find("name", "burger van heerlen");
-
-
   
-  const channel = member.guild.channels.find("name", "welkom");
-
-  if (!channel) return;
-  channel.send(`Welcome to the server ${member}.`);
 
   const channel12 = member.guild.channels.find("name", "logs");
     if (!channel12) console.log("Kan het kanaal niet vinden.");
  
     var joinEmbed = new discord.RichEmbed()
+        .setTitle("**USER JOINED**")
         .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
         .setDescription(`${member.user.username}, **joined the server**.`)
         .setColor("#00FF00")
@@ -52,6 +46,15 @@ bot.on("guildMemberAdd", member => {
         .setFooter("User joined.");
  
     channel12.send(joinEmbed);
+
+    var role = member.guild.roles.find("name", "burger van heerlen");
+
+
+  
+    const channel = member.guild.channels.find("name", "welkom");
+
+    if (!channel) return;
+    channel.send(`Welcome to the server ${member}.`);
 
     if (!role) return;
 
@@ -65,10 +68,12 @@ bot.on("guildMemberRemove", member => {
   if (!channel1) console.log("Kan het kanaal niet vinden.");
 
   var leaveEmbed = new discord.RichEmbed()
+      .setTitle("**USER LEAVED**")
       .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+      .setDescription(`${member.user.username}, **Has left the server**.`)
       .setColor("#FF0000")
       .setTimestamp()
-      .setFooter("User leaved.");
+      .setFooter('Mady by jan0de0man');;
 
   channel1.send(leaveEmbed);
 });
@@ -88,21 +93,7 @@ bot.on("guildMemberRemove", member => {
 	
 // });
 
-// bot.on("messageDelete", (messageDelete, member) => {
-//   const channel129 = member.guild.channels.find("name", "logs");
 
-//   if (!channel129) return console.log("Kan het kanaal niet vinden.");
-//   var joinEmbed22 = new discord.RichEmbed()
-//   //.setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
-//   .setDescription(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted..`)
-//   .setColor("#00FF00")
-//   .setTimestamp()
-//   .setFooter('Mady by jan0de0man');
-
-//   channel129.send(joinEmbed22);
-
-//   //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
-//  });
 bot.on("messageDelete", (messageDelete) => {
 
   let DeleteEmbed = new discord.RichEmbed()
