@@ -94,7 +94,7 @@ bot.on("messageDelete", member => {
 
   var joinEmbed = new discord.RichEmbed()
       //.setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-      .setDescription(`${member.user.tag}, **has deleted: ${executor.tag}.**.`)
+      .setDescription(`${member.user.username}, **has deleted: ${executor.tag}.**.`)
       .setColor("#fcba03")
       .setTimestamp()
       .setFooter("User joined.");
