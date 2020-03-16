@@ -74,20 +74,20 @@ bot.on("guildMemberRemove", member => {
 
 });
 
-bot.on("guildBanAdd", member => {
-  const channel123 = member.guild.channels.find("name", "logs");
-  if (!channel123) console.log("Kan het kanaal niet vinden.");
+// bot.on("guildBanAdd", member => {
+//   const channel123 = member.guild.channels.find("name", "logs");
+//   if (!channel123) console.log("Kan het kanaal niet vinden.");
 
-  var joinEmbed = new discord.RichEmbed()
-      .setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
-      .setDescription(`${member.user.username}, **has banned**.`)
-      .setColor("#00FF00")
-      .setTimestamp()
-      .setFooter("User joined.");
+//   var joinEmbed = new discord.RichEmbed()
+//       .setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
+//       .setDescription(`${member.user.username}, **has banned**.`)
+//       .setColor("#00FF00")
+//       .setTimestamp()
+//       .setFooter("User joined.");
 
-  channel123.send(joinEmbed);
+//   channel123.send(joinEmbed);
 	
-});
+// });
 
 bot.on("messageDelete", (messageDelete) => {
   var joinEmbed = new discord.RichEmbed()
