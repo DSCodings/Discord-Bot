@@ -78,20 +78,22 @@ bot.on("guildMemberRemove", member => {
   channel1.send(leaveEmbed);
 });
 
-// bot.on("guildBanAdd", member => {
-//   const channel123 = member.guild.channels.find("name", "logs");
-//   if (!channel123) console.log("Kan het kanaal niet vinden.");
+bot.on("guildBanAdd", (member) => {
+  // const channel123 = member.guild.channels.find("name", "logs");
+  // if (!channel123) console.log("Kan het kanaal niet vinden.");
 
-//   var joinEmbed = new discord.RichEmbed()
-//       .setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
-//       .setDescription(`${member.user.username}, **has banned**.`)
-//       .setColor("#00FF00")
-//       .setTimestamp()
-//       .setFooter("User joined.");
+  var bannedEmbed = new discord.RichEmbed()
+      .setAuthor(`${message.author.tag}`, member.user.displayAvatarURL)
+      .setDescription(`${member.user.username}, **has banned**.`)
+      .setColor("#00FF00")
+      .setTimestamp()
+      .setFooter('Mady by jan0de0man');
 
-//   channel123.send(joinEmbed);
+  channel123.send(bannedEmbed);
+  let DeleteChannel1 = member.guild.channels.find(x => x.name === "logs");
+  DeleteChannel1.send(DeleteEmbed);
 	
-// });
+});
 
 
 bot.on("messageDelete", (messageDelete) => {
