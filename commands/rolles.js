@@ -13,6 +13,7 @@ module.exports.run = async(bot, message, args) => {
         return member.user.username;
     })
 
+if(!membersWithRole) return message.channel.send("roll not found");
     let rolembed = new discord.RichEmbed()
         .setTitle(`Users with the ${roleName} role`)
         .setDescription(membersWithRole.join("\n"))
