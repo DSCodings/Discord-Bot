@@ -93,8 +93,8 @@ bot.on("messageDelete", member => {
   if (!channel12) console.log("Kan het kanaal niet vinden.");
 
   var joinEmbed = new discord.RichEmbed()
-      .setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
-      .setDescription(`${member.user.username}, **joined the server**.`)
+      //.setAuthor(`${member.user.tag}`, member.user.displayAvatarURL)
+      .setDescription(`${message.author.tag}, **joined the server**.`)
       .setColor("#00FF00")
       .setTimestamp()
       .setFooter("User joined.");
