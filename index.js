@@ -91,7 +91,7 @@ bot.on("guildMemberRemove", member => {
 bot.on("messageDelete", (messageDelete) => {
   //const channel12345 = member.guild.channels.find("name", "logs");
 
-  if (!channel12) console.log("Kan het kanaal niet vinden.");
+  //if (!channel12) console.log("Kan het kanaal niet vinden.");
   var joinEmbed22 = new discord.RichEmbed()
   //.setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
   .setDescription(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted..`)
