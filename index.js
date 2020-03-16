@@ -102,6 +102,11 @@ bot.on("messageDelete", (messageDelete) => {
   //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
  });
 
+ bot.on("guildBanAdd", async (UserBaned) => {
+	UserBaned.channel.send(`${user.tag} got hit with the swift hammer of justice in the guild ${guild.name}.`);
+});
+
+
 // bot.on("messageDelete", member => {
 //   const channel12 = member.guild.channels.find("name", "logs");
 //   if (!channel12) console.log("Kan het kanaal niet vinden.");
