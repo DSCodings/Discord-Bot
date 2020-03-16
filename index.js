@@ -90,7 +90,16 @@ bot.on("guildBanAdd", member => {
 });
 
 bot.on("messageDelete", (messageDelete) => {
-  messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
+  var joinEmbed = new discord.RichEmbed()
+  //.setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
+  .setDescription(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted..`)
+  .setColor("#00FF00")
+  .setTimestamp()
+  .setFooter('Mady by jan0de0man', message.guild.iconURL);
+
+  messageDelete.channel.send(joinEmbed);
+
+  //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
  });
 
 // bot.on("messageDelete", member => {
