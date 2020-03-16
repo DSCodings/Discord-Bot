@@ -103,8 +103,8 @@ bot.on("messageDelete", (messageDelete) => {
  });
 
  bot.on("guildBanAdd", member => {
-  const channel1239 = member.guild.channels.find("name", "logs");
-	channel1239.send(`${user.tag} got hit with the swift hammer of justice in the guild ${guild.name}.`);
+  //const channel1239 = member.guild.channels.find("name", "logs");
+	channel.send(`${user.tag} got hit with the swift hammer of justice in the guild ${guild.name}.`);
 });
 
 
