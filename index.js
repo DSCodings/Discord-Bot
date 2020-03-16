@@ -88,21 +88,34 @@ bot.on("guildMemberRemove", member => {
 	
 // });
 
-bot.on("messageDelete", (messageDelete, member) => {
-  const channel129 = member.guild.channels.find("name", "logs");
+// bot.on("messageDelete", (messageDelete, member) => {
+//   const channel129 = member.guild.channels.find("name", "logs");
 
-  if (!channel129) return console.log("Kan het kanaal niet vinden.");
-  var joinEmbed22 = new discord.RichEmbed()
-  //.setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
-  .setDescription(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted..`)
-  .setColor("#00FF00")
-  .setTimestamp()
-  .setFooter('Mady by jan0de0man');
+//   if (!channel129) return console.log("Kan het kanaal niet vinden.");
+//   var joinEmbed22 = new discord.RichEmbed()
+//   //.setAuthor(`${message.author.tag} Has been banned.`, member.user.displayAvatarURL)
+//   .setDescription(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted..`)
+//   .setColor("#00FF00")
+//   .setTimestamp()
+//   .setFooter('Mady by jan0de0man');
 
-  channel129.send(joinEmbed22);
+//   channel129.send(joinEmbed22);
 
-  //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
- });
+//   //messageDelete.channel.send(`The message : "${messageDelete.content}" by ${messageDelete.author.tag} was deleted.`)
+//  });
+bot.on("messageDelete", (messageDelete) => {
+
+  let DeleteEmbed = new Discord.RichEmbed()
+  .setTitle("**DELETED MESSAGE**")
+  .setColor("#fc3c3c")
+  .addField("Author", messageDelete.author.tag, true)
+  .addField("Channel", messageDelete.channel, true)
+  .addField("Message", messageDelete.content)
+  .setFooter(`Message ID: ${messageDelete.id} | Author ID: ${messageDelete.author.id}`);
+
+  let DeleteChannel = messageDelete.guild.channels.find(x => x.name === "logs");
+  DeleteChannel.send(DeleteEmbed);
+});
 
 //  bot.on("guildBanAdd", member => {
 //   //const channel1239 = member.guild.channels.find("name", "logs");
