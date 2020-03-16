@@ -89,9 +89,9 @@ bot.on("guildBanAdd", (member) => {
       .setTimestamp()
       .setFooter('Mady by jan0de0man');
 
-  channel123.send(bannedEmbed);
+  //channel123.send(bannedEmbed);
   let DeleteChannel1 = member.guild.channels.find(x => x.name === "logs");
-  DeleteChannel1.send(DeleteEmbed);
+  DeleteChannel1.send(bannedEmbed);
 	
 });
 
