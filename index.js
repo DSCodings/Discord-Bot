@@ -105,7 +105,7 @@ bot.on("guildMemberRemove", member => {
 //  });
 bot.on("messageDelete", (messageDelete) => {
 
-  let DeleteEmbed = new Discord.RichEmbed()
+  let DeleteEmbed = new discord.RichEmbed()
   .setTitle("**DELETED MESSAGE**")
   .setColor("#fc3c3c")
   .addField("Author", messageDelete.author.tag, true)
