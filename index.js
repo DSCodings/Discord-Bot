@@ -84,7 +84,7 @@ bot.on("guildBanAdd", (Userbanned) => {
 
   var bannedEmbed = new discord.RichEmbed()
       .setTitle("**USER BANNED**")
-      .setThumbnail(Userbanned.author.avatarURL)
+     //.setThumbnail(Userbanned.author.avatarURL)
       .setDescription(`${Userbanned.user.username}, **has banned**.`)
       .setColor("#00FF00")
       .setTimestamp()
