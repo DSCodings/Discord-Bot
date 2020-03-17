@@ -8,10 +8,11 @@ module.exports.run = async(bot, message, args) => {
     console.log(roleName);
     if(!roleName) return message.channel.send("<prefix>rank (Name) (roll)");
 
-    let Grole = message.guild.roles.find("name", roleName);
+    let Grole = message.guild.roles.find((role => role.name == roleName)
+    //("name", roleName);
     console.log(message.guild.roleName);
     console.log(message.guild.roles.name);
-    console.log(message.guild.roles.first);
+    console.log(message.guild.roles.first.name);
     console.log(Grole);
     if(!Grole) return message.reply("Couldn't find that role.");
 
