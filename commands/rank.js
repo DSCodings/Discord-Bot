@@ -14,8 +14,7 @@ module.exports.run = async(bot, message, args) => {
     console.log(message.guild.roles.name);
     console.log(message.guild.roles.first.name);
     console.log(Grole);
-    let Grole12 = message.guild.role.find("name", roleName);
-    console.log(Grole12);
+    
     if(!Grole) return message.reply("Couldn't find that role.");
 
     Userroll.addRole(Grole);
