@@ -7,10 +7,10 @@ module.exports.run = async(bot, message, args) => {
     let roleName = args.join(" ").slice(22);
     if(!roleName) return message.channel.send("<prefix>rank (Name) (roll)");
 
-    let Grole = member.guild.channels.find("name", roleName);
+    let Grole = message.guild.roles.find("name", roleName);
     //if(!Grole) return message.reply("Couldn't find that role.");
 
-    Userroll.addRole(roleName);
+    Userroll.addRole(Grole);
 
     //Filtering the guild members only keeping those with the role
     //Then mapping the filtered array to their usernames
