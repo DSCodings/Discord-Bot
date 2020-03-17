@@ -2,9 +2,9 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
     if(!message.member.hasPermission("MANAGE_SERVER")) return message.reply("You do not have access to this command");
-    let Userroll = message.guild.member(message.mentions.users.first() || message.guild.member(arguments[0]));
+    var Userroll = message.guild.member(message.mentions.users.first() || message.guild.member(arguments[0]));
     if(!Userroll) return message.reply("Couldn't find that user!");
-    let roleName = args.join(" ").slice(22);
+    var roleName = args.join(" ").slice(22);
     if(!roleName) return message.channel.send("<prefix>rank (Name) (roll)");
 
     let Grole = message.guild.roles.find("name", roleName);
