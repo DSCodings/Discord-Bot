@@ -12,7 +12,7 @@ module.exports.run = async(bot, message, args) => {
       .setThumbnail(Icon)
       .addField("Bot name", bot.user.username)
       .addField("you are joined on", message.member.joinedAt)
-      .addField("membres", message.guild.memberCount)
+      .addField("membrers", message.guild.memberCount)
       .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
