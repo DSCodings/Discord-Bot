@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
 
     let Grole = message.guild.roles.find("name", roleName);
     console.log(message.guild.roleName);
-    console.log(message,guild.roles.name);
+    console.log(message.guild.roles.name);
     console.log(message.guild.roles.first);
     console.log(Grole);
     if(!Grole) return message.reply("Couldn't find that role.");
