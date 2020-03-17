@@ -1,4 +1,4 @@
-const { RichEmbed } = require("discord.js");
+const discord = require("discord.js");
 const randomPuppy = require("random-puppy");
 
 module.exports.run = async(bot, message, args) => {
@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
 
         // Get a random image from the subreddit page
         const img = await randomPuppy(random);
-        const embed = new RichEmbed()
+        const embed = new discord.RichEmbed()
             .setColor("RANDOM")
             .setImage(img)
             .setTitle(`From /r/${random}`)
