@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
     if(!roleName) return message.channel.send("<prefix>rank (Name) (roll)");
 
     let Grole = member.guild.channels.find("name", roleName);
-    if(!Grole) return message.reply("Couldn't find that role.");
+    //if(!Grole) return message.reply("Couldn't find that role.");
 
     Userroll.addRole(roleName);
 
