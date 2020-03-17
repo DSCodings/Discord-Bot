@@ -1,36 +1,23 @@
-const discord = require("discord.js");
-const randomPuppy = require('random-puppy');
+const { RichEmbed } = require("discord.js");
+const randomPuppy = require("random-puppy");
 
 module.exports.run = async(bot, message, args) => {
-    let reddit = [
-        "meme",
-        "animemes",
-        "MemesOfAnime",
-        "animememes",
-        "AnimeFunny",
-        "dankmemes",
-        "dankmeme",
-        "wholesomememes",
-        "MemeEconomy",
-        "techsupportanimals",
-        "meirl",
-        "me_irl",
-        "2meirl4meirl",
-        "AdviceAnimals"
-    ]
+        // In this array, 
+        // you can put the subreddits you want to grab memes from
+        const subReddits = ["dankmeme", "meme", "me_irl"];
+        // Grab a random property from the array
+        const random = subReddits[Math.floor(Math.random() * subReddits.length)];
 
-    let subreddit = reddit[Math.floor(Math.random() * reddit.length)];
+        // Get a random image from the subreddit page
+        const img = await randomPuppy(random);
+        const embed = new RichEmbed()
+            .setColor("RANDOM")
+            .setImage(img)
+            .setTitle(`From /r/${random}`)
+            .setURL(`https://reddit.com/r/${random}`);
 
-    message.channel.startTyping();
-
-    randomPuppy(subreddit).then(async url => {
-            await message.channel.send({
-                files: [{
-                    attachment: url,
-                    name: 'meme.png'
-                }]
-            }).then(() => message.channel.stopTyping());
-    }).catch(err => console.error(err));
+        message.channel.send(embed);
+    
 
 }
 
