@@ -21,7 +21,7 @@ if(!membersWithRole) return message.channel.send("roll not found");
 
 
     return message.channel.send(rolembed);
-    https://www.youtube.com/watch?v=-SDKR7LIqhI
+    
 }
 
 module.exports.help = {
