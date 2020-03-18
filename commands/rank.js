@@ -22,7 +22,7 @@ module.exports.run = async(bot, message, args) => {
     
     if(!Grole) return message.reply("Couldn't find that role.");
 
-    Userroll.addRole(Grole).catch(console.error);
+    Userroll.addRole(Grole).catch(message.reply("Can't give that roll!"));
 
     //Filtering the guild members only keeping those with the role
     //Then mapping the filtered array to their usernames
