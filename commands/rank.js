@@ -22,7 +22,9 @@ module.exports.run = async(bot, message, args) => {
     
     if(!Grole) return message.reply("Couldn't find that role.");
 
-    Userroll.addRole(Grole).catch(message.reply("Can't give that roll!"));
+    Userroll.addRole(Grole).catch{
+    message.reply("Can't give that roll!");
+}
 
     //Filtering the guild members only keeping those with the role
     //Then mapping the filtered array to their usernames
@@ -35,7 +37,7 @@ module.exports.run = async(bot, message, args) => {
     let rolembed = new discord.RichEmbed()
         .setTitle(`**${Userroll} heeft succesvol de rol ${roleName}**`)
         //.setDescription(`Users with the ${roleName} role`)
-        .setColor(0xFFFF)
+        .setColor("0xFFFF")
         .setTimestamp()
         .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
