@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
     console.log(roleName);
     if(!roleName) return message.channel.send("<prefix>rank (Name) (roll)");
 
-    //let Grole = member.roles.cache.some(role => role.name === roleName);
+    
     let Grole = message.guild.members.filter(member => { 
         return member.roles.find(role => role.name === roleName);
     }).map(member => {
