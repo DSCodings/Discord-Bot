@@ -10,7 +10,9 @@ module.exports.run = async(bot, message, args) => {
 
     let Grole = member.roles.cache.some(role => role.name === roleName);
     let Grole = message.guild.members.filter(member => { 
-        return member.roles.find("name", roleName);
+        return member.roles.find(role => role.name === roleName);
+    }).map(member => {
+        return member.user.username;
     })
     //("name", roleName);
     //let Grole = message.guild.roles.find(role => role.name === roleName);
