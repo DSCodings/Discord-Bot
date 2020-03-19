@@ -3,9 +3,9 @@ const discord = require("discord.js");
 module.exports.run = async(bot, message, args) => {
     var Icon = message.guild.iconURL;
     
-    if (!user.roles) {
-    user.roles = [ ];
-    }
+    // if (!user.roles) {
+    // user.roles = [ ];
+    // }
     
     
     
