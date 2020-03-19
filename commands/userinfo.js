@@ -19,7 +19,7 @@ if (message.mentions.users.first()) {
 
 const member = message.guild.member(user);
 
-const embed = new Discord.RichEmbed()
+const embed = new discord.RichEmbed()
     .setColor("RANDOM")
     .setThumbnail(message.author.avatarURL)
     .addField(`${user.tag}`, `${user}`, true)
