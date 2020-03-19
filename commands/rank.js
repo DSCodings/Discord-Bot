@@ -9,13 +9,14 @@ module.exports.run = async(bot, message, args) => {
     if(!roleName) return message.channel.send("<prefix>rank (Name) (roll)");
 
     
-    let Grole = message.guild.members.filter(member => { 
-        return member.roles.find(role => role.name === roleName);
-    }).map(member => {
-        return member.user.username;
-    })
+    // let Grole = message.guild.members.filter(member => { 
+    //     return member.roles.find(role => role.name === roleName);
+    // }).map(member => {
+    //     return member.user.username;
+    // })
     //("name", roleName);
     //let Grole = message.guild.roles.find(role => role.name === roleName);
+    const grole = message.guild.roles.find( role => { return role.name == args[2] });
     console.log(message.guild.roleName);
     console.log(message.guild.roles.name);
     console.log(message.guild.roles.first.name);
