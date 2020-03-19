@@ -3,6 +3,10 @@ const discord = require("discord.js");
 module.exports.run = async(bot, message, args) => {
     var Icon = message.guild.iconURL;
     
+    if (!user.roles) {
+    user.roles = [ ];
+    }
+    
     
     
     var serverEmbed =  new discord.RichEmbed()
@@ -11,8 +15,7 @@ module.exports.run = async(bot, message, args) => {
       .setThumbnail(Icon)
       .addField("Bot name", bot.user.username)
       .addField("you are joined on", message.member.joinedAt)
-      .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
-      .setTimestamp()
+      .addField('Roles:', user.roles ? user.roles.map(r => `${r}`).join(' | ') : "", true)
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
 
