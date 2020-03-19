@@ -11,7 +11,7 @@ module.exports.run = async(bot, message, args) => {
       .setThumbnail(Icon)
       .addField("Bot name", bot.user.username)
       .addField("you are joined on", message.member.joinedAt)
-      .addField('Roles:', message.guild.roles.map(r => `${r}`).join(' | '), true)
+      .addField('Roles:', member.roles.map(r => `${r}`).join(' | '), true)
       .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
