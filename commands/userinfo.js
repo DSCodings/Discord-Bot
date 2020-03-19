@@ -28,11 +28,11 @@ const embed = new discord.RichEmbed()
     //.addField("Status:", `${user.presence.status}`, true)
     .addField("In Server", message.guild.name, true)
     //.addField("Game:", `${user.presence.game ? user.presence.game.name : 'None'}`, true)
-    .addField("Bot:", `${user.bot}`, true)
+    //.addField("Bot:", `${user.bot}`, true)
     .addField("Joined The Server On:", message.member.joinedAt)
-    .addField("Account Created On:", `${moment.utc(user.createdAt).format("dddd, MMMM Do YYYY")}`, true) 
+    //.addField("Account Created On:", `${moment.utc(user.createdAt).format("dddd, MMMM Do YYYY")}`, true) 
     .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
-    .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
+    //.setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
 
 
     return message.channel.send(embed);
