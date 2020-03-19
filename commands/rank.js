@@ -16,7 +16,7 @@ module.exports.run = async(bot, message, args) => {
     // })
     //("name", roleName);
     //let Grole = message.guild.roles.find(role => role.name === roleName);
-    const Grole = message.guild.roles.find( role => { return role.name == args[2] });
+    const Grole = message.guild.roles.find( role => { return role.name == roleName });
     console.log(message.guild.roleName);
     console.log(message.guild.roles.name);
     console.log(message.guild.roles.first.name);
