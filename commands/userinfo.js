@@ -9,8 +9,8 @@ module.exports.run = async(bot, message, args) => {
     userinfo.discrim = `#${user.discriminator}` ;
     userinfo.id = user.id;
     userinfo.status = user.presence.status;
-    userinfo.registered = moment.utc(message.guild.member.get(user.id).user.createdAt).format("dddd, MMMM Do. YYYY");
-    userinfo.joined = moment.utc(message.guild.members.get(user.id).joinedAt).format("dddd, MMMM Do, YYYY")
+    //userinfo.registered = user.member.create //moment.utc(message.guild.member.get(user.id).user.createdAt).format("dddd, MMMM Do. YYYY");
+    userinfo.joined = user.joinedAt // ..joinedAt ///moment.utc(message.guild.members.get(user.id).joinedAt).format("dddd, MMMM Do, YYYY")
 
 
     
@@ -21,7 +21,7 @@ module.exports.run = async(bot, message, args) => {
         .addField('Discriminator', userinfo.discrim, true)
         .addField('ID', userinfo.id, true) 
         .addField("status", userinfo.status, true)
-        .addField("Registered", userinfo.registered)
+        //.addField("Registered", userinfo.registered)
         .addField("Joined", userinfo.joined)
         .setColor(0xffffff);
         
