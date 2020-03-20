@@ -2,6 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
     let user = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
+    if (!user) user = message.author;
 
     let userinfo = {};
     //userinfo.avatar = user.author.avatarURL;
@@ -10,7 +11,7 @@ module.exports.run = async(bot, message, args) => {
     userinfo.id = user.id;
     userinfo.status = user.presence.status;
     userinfo.registered = user.createdAt; //moment.utc(message.guild.member.get(user.id).user.createdAt).format("dddd, MMMM Do. YYYY");
-    userinfo.joined = user.joinedAt // ..joinedAt ///moment.utc(message.guild.members.get(user.id).joinedAt).format("dddd, MMMM Do, YYYY")
+    userinfo.joined = user.joinedAt; // ..joinedAt ///moment.utc(message.guild.members.get(user.id).joinedAt).format("dddd, MMMM Do, YYYY")
 
 
     
