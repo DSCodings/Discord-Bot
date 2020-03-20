@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
     let user = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
-    if (!user) user = message.author;
+    if (!user) user = message;
 
     let userinfo = {};
     //userinfo.avatar = user.author.avatarURL;
