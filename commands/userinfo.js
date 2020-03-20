@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
     let user = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
 
     let userinfo = {};
-    userinfo.avatar = user.avatarURL;
+    userinfo.avatar = user.author.avatarURL;
     userinfo.name = user.username;
     userinfo.discrim = `#${user.discriminator}` ;
     userinfo.id = user.id;
