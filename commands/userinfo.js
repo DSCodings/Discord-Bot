@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
     let user = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
-    if (!user) user = message;
+    if (!user) user = message.author;
 
     let userinfo = {};
     //userinfo.avatar = user.author.avatarURL;
@@ -19,10 +19,10 @@ module.exports.run = async(bot, message, args) => {
         //.setAuthor(user.tag, userinfo.avatar) 
         .setThumbnail(userinfo.avatar)
         .addField('Username', userinfo.name, true) 
-        .addField('Discriminator', userinfo.author.discrim, true)
+        .addField('Discriminator', userinfo.discrim, true)
         .addField('ID', userinfo.id, true) 
         .addField("status", userinfo.status, true)
-        .addField("Registered", userinfo.author.registered)
+        .addField("Registered", userinfo.registered)
         .addField("Joined", userinfo.joined)
         .setColor(0xffffff);
         
