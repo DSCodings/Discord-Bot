@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
 
     let userinfo = {};
     //userinfo.avatar = user.author.avatarURL;
-    userinfo.name = user.username;
+    userinfo.name = user.author.tag;
     userinfo.discrim = `#${user.discriminator}` ;
     userinfo.id = user.id;
     userinfo.status = user.presence.status;
