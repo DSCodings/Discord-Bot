@@ -21,7 +21,7 @@ module.exports.run = async(bot, message, args) => {
         .addField('Discriminator', userinfo.discrim, true)
         .addField('ID', userinfo.id, true) 
         .addField("status", userinfo.status, true)
-        //.addField("Registered", userinfo.registered)
+        .addField("Registered", userinfo.registered)
         .addField("Joined", userinfo.joined)
         .setColor(0xffffff);
         
