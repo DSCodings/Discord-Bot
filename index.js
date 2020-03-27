@@ -175,7 +175,7 @@ bot.on("channelUpdate", async(oldChannel, newChannel) => {
   let loggingCHanne1l = newChannel.guild.channels.find(ch => ch.name === "logs");
   if(!loggingCHanne1l) return console.log("Kan het kanaal niet vinden.");
 
-  loggingCHannel.send(LOG1Embed);
+  loggingCHanne1l.send(LOG1Embed);
 
 
 
