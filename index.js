@@ -159,6 +159,27 @@ bot.on("messageUpdate", async(oldMessage, newMessage) => {
 
 
 });
+bot.on("channelUpdate", async(oldChannel, newChannel) => {
+  console.log("sadf")
+  if(oldChannel.content === newChannel.content){
+    return;
+  }
+  let LOG1Embed = new discord.RichEmbed()
+  .setColor("#ff6a00")
+  .setDescription("**CHANNEL EDITED**")
+  .addField("Before", oldChannel.content, true)
+  .addField("after", newChannel.content, true)
+  .setTimestamp()
+  .setFooter('Mady by jan0de0man');
+
+  let loggingCHanne1l = newMessage.guild.channels.find(ch => ch.name === "logs");
+  if(!loggingCHanne1l) return console.log("Kan het kanaal niet vinden.");
+
+  loggingCHannel.send(LOG1Embed);
+
+
+
+});
 
 
 
