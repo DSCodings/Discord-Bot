@@ -172,7 +172,7 @@ bot.on("channelUpdate", async(oldChannel, newChannel) => {
   .setTimestamp()
   .setFooter('Mady by jan0de0man');
 
-  let loggingCHanne1l = newMessage.guild.channels.find(ch => ch.name === "logs");
+  let loggingCHanne1l = newChannel.guild.channels.find(ch => ch.name === "logs");
   if(!loggingCHanne1l) return console.log("Kan het kanaal niet vinden.");
 
   loggingCHannel.send(LOG1Embed);
