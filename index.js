@@ -111,6 +111,16 @@ bot.on("messageDelete", (messageDelete) => {
   let DeleteChannel = messageDelete.guild.channels.find(x => x.name === "logs");
   DeleteChannel.send(DeleteEmbed);
 });
+bot.on("CHANNEL_CREATE", channel => {
+  let createchannelEmbed = new discord.RichEmbed()
+    .setTitle("**CHANNEL_CREATED**")
+    .setColor("#fc3c3c")
+    .addField("channel created","Channel with ID: " + channel.id + " was just created");
+
+  let createchannelChannel = messageDelete.guild.channels.find(x => x.name === "logs");
+  createchannelChannel.send(createchannelEmbed);
+});
+
 
 //  bot.on("guildBanAdd", member => {
 //   //const channel1239 = member.guild.channels.find("name", "logs");
