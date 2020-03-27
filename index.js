@@ -118,7 +118,7 @@ bot.on("channelCreate", channel => {
     .setColor("#fc3c3c")
     .addField("channel created","Channel with ID: " + channel.id + " was just created");
 
-  let createchannelChannel = messageDelete.guild.channels.find(x => x.name === "logs");
+  let createchannelChannel = channel.guild.channels.find(x => x.name === "logs");
   createchannelChannel.send(createchannelEmbed);
 });
 
