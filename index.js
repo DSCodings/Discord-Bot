@@ -161,9 +161,9 @@ bot.on("messageUpdate", async(oldMessage, newMessage) => {
 });
 bot.on("channelUpdate", async(oldChannel, newChannel) => {
   console.log("sadf")
-  if(oldChannel.content === newChannel.content){
-    return;
-  }
+  // if(oldChannel.content === newChannel.content){
+  //   return;
+  // }
   let LOG1Embed = new discord.RichEmbed()
   .setColor("#ff6a00")
   .setDescription("**CHANNEL EDITED**")
