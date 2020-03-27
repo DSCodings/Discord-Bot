@@ -51,10 +51,10 @@ bot.on("guildMemberAdd", member => {
 
 
   
-    const channel = member.guild.channels.find("name", "welkom");
+    const channel9 = member.guild.channels.find("name", "welkom");
 
-    if (!channel) return;
-    channel.send(`Welcome to the server ${member}.`);
+    if (!channel9) return;
+    channel9.send(`Welcome to the server ${member}.`);
 
     if (!role) return;
 
@@ -111,12 +111,12 @@ bot.on("messageDelete", (messageDelete) => {
   let DeleteChannel = messageDelete.guild.channels.find(x => x.name === "logs");
   DeleteChannel.send(DeleteEmbed);
 });
-bot.on("channelCreate", channel => {
+bot.on("channelCreate",async (channel) => {
   console.log("1")
   let createchannelEmbed = new discord.RichEmbed()
     .setTitle("**CHANNEL_CREATED**")
     .setColor("#fc3c3c")
-    .addField("channel created","Channel with ID: " + channel.id + " was just created");
+    .setDescription("Channel Name:" + channel.name + "Channel Type:" + channel.type);
 
   let createchannelChannel = channel.guild.channels.find(x => x.name === "logs");
   createchannelChannel.send(createchannelEmbed);
