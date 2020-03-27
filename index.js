@@ -112,14 +112,24 @@ bot.on("messageDelete", (messageDelete) => {
   DeleteChannel.send(DeleteEmbed);
 });
 bot.on("channelCreate",async (channel) => {
-  console.log("1")
+  console.log("channel created")
   let createchannelEmbed = new discord.RichEmbed()
     .setTitle("**CHANNEL_CREATED**")
     .setColor("#fc3c3c")
-    .setDescription("Channel Name:" + channel.name + "Channel Type:" + channel.type);
+    .setDescription("Channel Name: " + channel.name + " Has created with Type:" + channel.type);
 
   let createchannelChannel = channel.guild.channels.find(x => x.name === "logs");
   createchannelChannel.send(createchannelEmbed);
+});
+bot.on("channelDelete",async (channel) => {
+  console.log("Channel deleted.")
+  let DeletechannelEmbed = new discord.RichEmbed()
+    .setTitle("**CHANNEL_DELETED**")
+    .setColor("#00FF00")
+    .setDescription("Channel Name: " + channel.name + " Has Deleted with Type:" + channel.type);
+
+  let DeletechannelChannel = channel.guild.channels.find(x => x.name === "logs");
+  DeletechannelChannel.send(DeletechannelEmbed);
 });
 
 
