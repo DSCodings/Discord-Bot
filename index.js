@@ -160,7 +160,10 @@ bot.on("messageUpdate", async(oldMessage, newMessage) => {
 
 });
 bot.on("channelUpdate", async(oldChannel, newChannel) => {
-  console.log("sadf")
+  console.log(`channelUpdate -> a channel is updated - e.g. name change, topic change`);
+  console.log("channel")
+  console.log(oldChannel)
+  console.log(newChannel)
   // if(oldChannel.content === newChannel.content){
   //   return;
   // }
