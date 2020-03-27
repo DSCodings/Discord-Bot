@@ -111,7 +111,8 @@ bot.on("messageDelete", (messageDelete) => {
   let DeleteChannel = messageDelete.guild.channels.find(x => x.name === "logs");
   DeleteChannel.send(DeleteEmbed);
 });
-bot.on("CHANNEL_CREATE", channel => {
+bot.on("channelCreate", channel => {
+  console.log("1")
   let createchannelEmbed = new discord.RichEmbed()
     .setTitle("**CHANNEL_CREATED**")
     .setColor("#fc3c3c")
