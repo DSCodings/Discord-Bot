@@ -145,7 +145,7 @@ bot.on("roleUpdate", function(oldRole, newRole){
   .setTimestamp()
   .setFooter('Mady by jan0de0man');
 
-  let loggingCHanne129l = newChannel.guild.channels.find(ch => ch.name === "logs");
+  let loggingCHanne129l = newRole.guild.channels.find(ch => ch.name === "logs");
   if(!loggingCHanne129l) return console.log("Kan het kanaal niet vinden.");
 
   loggingCHanne129l.send(LOG129Embed);
