@@ -159,7 +159,7 @@ bot.on("messageUpdate", async(oldMessage, newMessage) => {
 
 
 });
-client.on("messageDeleteBulk", function(messages){
+bot.on("messageDeleteBulk", function(messages){
   console.log(`messages are deleted -> ${messages}`);
   let LOG12Embed = new discord.RichEmbed()
   .setColor("#ff6a00")
