@@ -133,7 +133,7 @@ bot.on("roleDelete", function(role){
 
   let rolDeletedchannel = role.guild.channels.find(x => x.name === "logs");
   if(!rolDeletedchannel) return console.log("Kan het kanaal niet vinden.");
-  roldeletedchannel.send(DeleterolEmbed);
+  rolDeletedchannel.send(DeleterolEmbed);
 });
 
 
