@@ -168,7 +168,7 @@ bot.on("messageDeleteBulk", function(messages){
   .setTimestamp()
   .setFooter('Mady by jan0de0man');
 
-  let loggingCHanne12l = newChannel.guild.channels.find(ch => ch.name === "logs");
+  let loggingCHanne12l = messages.guild.channels.find(ch => ch.name === "logs");
   if(!loggingCHanne12l) return console.log("Kan het kanaal niet vinden.");
 
   loggingCHanne12l.send(LOG12Embed);
