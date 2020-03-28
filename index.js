@@ -115,7 +115,7 @@ bot.on("roleCreate", function(role){
   console.error(`a role is created`);
   let createrolEmbed = new discord.RichEmbed()
     .setTitle("**ROL CREATED**")
-    .setColor("##00FF00")
+    .setColor("#00FF00")
     .setDescription("role Name: " + role.name + " Has created.");
 
   let rolcreatechannel = role.guild.channels.find(x => x.name === "logs");
@@ -134,6 +134,21 @@ bot.on("roleDelete", function(role){
   let rolDeletedchannel = role.guild.channels.find(x => x.name === "logs");
   if(!rolDeletedchannel) return console.log("Kan het kanaal niet vinden.");
   rolDeletedchannel.send(DeleterolEmbed);
+});
+
+client.on("roleUpdate", function(oldRole, newRole){
+  let LOG129Embed = new discord.RichEmbed()
+  .setColor("#ff6a00")
+  .setDescription("**ROL EDITED**")
+  .addField("Before", oldRole.name, true)
+  .addField("after", newRole.name, true)
+  .setTimestamp()
+  .setFooter('Mady by jan0de0man');
+
+  let loggingCHanne129l = newChannel.guild.channels.find(ch => ch.name === "logs");
+  if(!loggingCHanne129l) return console.log("Kan het kanaal niet vinden.");
+
+  loggingCHanne129l.send(LOG129Embed);
 });
 
 
