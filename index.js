@@ -47,7 +47,7 @@ bot.on("guildMemberAdd", member => {
  
     channel12.send(joinEmbed);
 
-    message.author.send(text).catch(() => {
+    member.send(text).catch(() => {
 
       console.log("**")
 
