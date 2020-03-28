@@ -32,7 +32,7 @@ module.exports.run = async(bot, message, args) => {
     let LOG12Embed = new discord.RichEmbed()
         .setColor("#ff6a00")
         .setDescription("**MESSAGE DELETED**")
-        .addField("message deleted", amount12 + "are deleted", true)
+        .addField("message deleted", amount12 + " messages are deleted", true)
         .setTimestamp()
         .setFooter('Mady by jan0de0man');
 
