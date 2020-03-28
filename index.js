@@ -136,7 +136,7 @@ bot.on("roleDelete", function(role){
   rolDeletedchannel.send(DeleterolEmbed);
 });
 
-client.on("roleUpdate", function(oldRole, newRole){
+bot.on("roleUpdate", function(oldRole, newRole){
   let LOG129Embed = new discord.RichEmbed()
   .setColor("#ff6a00")
   .setDescription("**ROL EDITED**")
