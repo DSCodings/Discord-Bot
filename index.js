@@ -111,6 +111,25 @@ bot.on("messageDelete", (messageDelete) => {
   let DeleteChannel = messageDelete.guild.channels.find(x => x.name === "logs");
   DeleteChannel.send(DeleteEmbed);
 });
+bot.on("roleCreate", function(role){
+  console.error(`a role is created`);
+  let createrolEmbed = new discord.RichEmbed()
+    .setTitle("**ROL CREATED**")
+    .setColor("##00FF00")
+    .setDescription("role Name: " + role.name + " Has created.");
+
+  let rolcreatechannel = messageDelete.guild.channels.find(x => x.name === "logs");
+  if(!rolcreatechannel) return console.log("Kan het kanaal niet vinden.");
+  rolcreatechannel.send(createrolEmbed);
+
+});
+
+bot.on("roleDelete", function(role){
+  console.error(`a guild role is deleted`);
+});
+
+
+
 bot.on("channelCreate",async (channel) => {
   console.log("channel created")
   let createchannelEmbed = new discord.RichEmbed()
@@ -119,6 +138,7 @@ bot.on("channelCreate",async (channel) => {
     .setDescription("Channel Name: " + channel.name + " Has created with Type: " + channel.type);
 
   let createchannelChannel = channel.guild.channels.find(x => x.name === "logs");
+  if(!createchannelChannel) return console.log("Kan het kanaal niet vinden.");
   createchannelChannel.send(createchannelEmbed);
 });
 bot.on("channelDelete",async (channel) => {
@@ -129,6 +149,7 @@ bot.on("channelDelete",async (channel) => {
     .setDescription("Channel Name: " + channel.name + " Has Deleted with Type: " + channel.type);
 
   let DeletechannelChannel = channel.guild.channels.find(x => x.name === "logs");
+  if(!DeletechannelChannel) return console.log("Kan het kanaal niet vinden.");
   DeletechannelChannel.send(DeletechannelEmbed);
 });
 
