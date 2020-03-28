@@ -10,6 +10,8 @@ module.exports.run = async(bot, message, args) => {
 
         var amount = parseInt(args[0]) + 1;
 
+        var amount12 = parseInt(args[0]) + 0;
+
         message.channel.bulkDelete(amount).then(() => {
 
             if (args[0] == 0){
@@ -27,10 +29,20 @@ module.exports.run = async(bot, message, args) => {
     } else {
         return message.reply("Enter a number");
     }
+    let LOG12Embed = new discord.RichEmbed()
+        .setColor("#ff6a00")
+        .setDescription("**MESSAGE DELETED**")
+        .addField("message deleted", amount12 + "are deleted", true)
+        .setTimestamp()
+        .setFooter('Mady by jan0de0man');
+
+    let clearlog = message.guild.channels.find(ch => ch.name === "logs");
+    if(!clearlog) return console.log("Kan het kanaal niet vinden.");
+    loggingCHanne12l.send(LOG12Embed);
 
 }
 
 module.exports.help = {
     name: "clear",
-    description: "emptying a chat eg <prefix>clear amount"
+    description: "emptying a chat do <prefix>clear amount"
 }

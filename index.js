@@ -159,21 +159,21 @@ bot.on("messageUpdate", async(oldMessage, newMessage) => {
 
 
 });
-bot.on("messageDeleteBulk", function(messages){
-  console.log(`messages are deleted -> ${messages}`);
-  // let LOG12Embed = new discord.RichEmbed()
-  // .setColor("#ff6a00")
-  // .setDescription("**MESSAGE DELETED**")
-  // .addField("message deleted", messages + "are deleted", true)
-  // .setTimestamp()
-  // .setFooter('Mady by jan0de0man');
+// bot.on("messageDeleteBulk", function(messages){
+//   console.log(`messages are deleted -> ${messages}`);
+//   // let LOG12Embed = new discord.RichEmbed()
+//   // .setColor("#ff6a00")
+//   // .setDescription("**MESSAGE DELETED**")
+//   // .addField("message deleted", messages + "are deleted", true)
+//   // .setTimestamp()
+//   // .setFooter('Mady by jan0de0man');
 
-  // let loggingCHanne12l = messages.guild.channels.find(ch => ch.name === "logs");
-  // if(!loggingCHanne12l) return console.log("Kan het kanaal niet vinden.");
+//   // let loggingCHanne12l = messages.guild.channels.find(ch => ch.name === "logs");
+//   // if(!loggingCHanne12l) return console.log("Kan het kanaal niet vinden.");
 
-  // loggingCHanne12l.send(LOG12Embed);
+//   // loggingCHanne12l.send(LOG12Embed);
 
-});
+// });
 
 
 bot.on("channelUpdate", async(oldChannel, newChannel) => {
