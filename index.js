@@ -32,7 +32,7 @@ bot.on("ready", async () => {
 
 bot.on("guildMemberAdd", member => {
 
-  
+  var text = `Welkom to the server ${member}`;
 
   const channel12 = member.guild.channels.find("name", "logs");
     if (!channel12) console.log("Kan het kanaal niet vinden.");
@@ -46,6 +46,12 @@ bot.on("guildMemberAdd", member => {
         .setFooter('Mady by jan0de0man');
  
     channel12.send(joinEmbed);
+
+    message.author.send(text).catch(() => {
+
+      console.log("**")
+
+    });
 
     var role = member.guild.roles.find("name", "burger van heerlen");
 
@@ -140,8 +146,8 @@ bot.on("roleUpdate", function(oldRole, newRole){
   let LOG129Embed = new discord.RichEmbed()
   .setColor("#ff6a00")
   .setDescription("**ROL EDITED**")
-  .addField("Before", oldRole.name, true)
-  .addField("after", newRole.name, true)
+  .addField("Old name", oldRole.name, true)
+  .addField("New name", newRole.name, true)
   .setTimestamp()
   .setFooter('Mady by jan0de0man');
 
