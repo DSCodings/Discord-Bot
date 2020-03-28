@@ -170,8 +170,8 @@ bot.on("channelUpdate", async(oldChannel, newChannel) => {
   let LOG1Embed = new discord.RichEmbed()
   .setColor("#ff6a00")
   .setDescription("**CHANNEL EDITED**")
-  .addField("Before", oldChannel.content, true)
-  .addField("after", newChannel.content, true)
+  .addField("Before", oldChannel.name, true)
+  .addField("after", newChannel.name, true)
   .setTimestamp()
   .setFooter('Mady by jan0de0man');
 
