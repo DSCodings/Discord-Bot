@@ -38,7 +38,7 @@ module.exports.run = async(bot, message, args) => {
 
     let clearlog = message.guild.channels.find(ch => ch.name === "logs");
     if(!clearlog) return console.log("Kan het kanaal niet vinden.");
-    loggingCHanne12l.send(LOG12Embed);
+    clearlog.send(LOG12Embed);
 
 }
 
