@@ -126,6 +126,14 @@ bot.on("roleCreate", function(role){
 
 bot.on("roleDelete", function(role){
   console.error(`a guild role is deleted`);
+  let DeleterolEmbed = new discord.RichEmbed()
+    .setTitle("**ROL DELETED**")
+    .setColor("#fc3c3c")
+    .setDescription("role Name: " + role.name + " Has deleted.");
+
+  let rolDeletedchannel = role.guild.channels.find(x => x.name === "logs");
+  if(!rolDeletedchannel) return console.log("Kan het kanaal niet vinden.");
+  roldeletedchannel.send(DeleterolEmbed);
 });
 
 
