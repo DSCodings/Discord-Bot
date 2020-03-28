@@ -118,7 +118,7 @@ bot.on("roleCreate", function(role){
     .setColor("##00FF00")
     .setDescription("role Name: " + role.name + " Has created.");
 
-  let rolcreatechannel = messageDelete.guild.channels.find(x => x.name === "logs");
+  let rolcreatechannel = role.guild.channels.find(x => x.name === "logs");
   if(!rolcreatechannel) return console.log("Kan het kanaal niet vinden.");
   rolcreatechannel.send(createrolEmbed);
 
