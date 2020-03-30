@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
-    var reason = args.join(" ").slice(22);
+    var reason = args.join(" ");
     console.log(reason)
     if (!reason) return message.channel.send("give a text");
     message.channel.bulkDelete(1)
