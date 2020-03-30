@@ -2,10 +2,10 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
     var reason = args.join(" ");
-    console.log(reason)
+    console.log(reason);
     //if (!reason) return message.channel.send("give a text");
-    message.channel.bulkDelete(1)
-    message.channel.send(reason)
+    message.channel.bulkDelete(1);
+    message.channel.send(reason);
 
 }
 
