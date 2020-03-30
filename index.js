@@ -143,7 +143,7 @@ bot.on("roleDelete", function(role){
 });
 
 bot.on("roleUpdate", function(oldRole, newRole){
-  if(oldRole.content === newRole.content){
+  if(oldRole.name === newRole.name){
     return;
  }
   let LOG129Embed = new discord.RichEmbed()
@@ -234,7 +234,7 @@ bot.on("channelUpdate", async(oldChannel, newChannel) => {
   console.log("channel")
   console.log(oldChannel)
   console.log(newChannel)
-  if(oldChannel.content === newChannel.content){
+  if(oldChannel.name === newChannel.name){
      return;
   }
   let LOG1Embed = new discord.RichEmbed()
