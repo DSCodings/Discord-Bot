@@ -143,9 +143,9 @@ bot.on("roleDelete", function(role){
 });
 
 bot.on("roleUpdate", function(oldRole, newRole){
-  if(oldRole.name === newRole.name){
-    return;
- }
+//   if(oldRole.name === newRole.name){
+//     return;
+//  }
   let LOG129Embed = new discord.RichEmbed()
   .setColor("#ff6a00")
   .setDescription("**ROL EDITED**")
@@ -234,9 +234,9 @@ bot.on("channelUpdate", async(oldChannel, newChannel) => {
   console.log("channel")
   console.log(oldChannel)
   console.log(newChannel)
-  if(oldChannel.name === newChannel.name){
-     return;
-  }
+  // if(oldChannel.name === newChannel.name){
+  //    return;
+  // }
   let LOG1Embed = new discord.RichEmbed()
   .setColor("#ff6a00")
   .setDescription("**CHANNEL EDITED**")
