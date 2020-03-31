@@ -19,7 +19,7 @@ fs.readdir("./commands/", (err, files) => {
     var fileGet = require(`./commands/${f}`);
     console.log(`The fil ${f} is loaded`); 
 
-    bot.commands.set(fileGet.name, fileGet);
+    bot.commands.set(fileGet.help.name, fileGet);
   });
 
 });
