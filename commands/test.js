@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
     return message.channel.send("Test is suc6vol gelukt!");
 }
 
-module.exports.help = {
+module.exports = {
     name: "test",
     description: "for test the bot"
 }
