@@ -276,6 +276,7 @@ bot.on("channelUpdate", async(oldChannel, newChannel) => {
 
 bot.on("message", async message => {
 
+  console.log("binnen1")
   // Als de bot bericht stuurd
   if (message.author.bot) return;
 
@@ -305,7 +306,7 @@ bot.on("message", async message => {
     // var options = {
     //   active: active
     // }
- 
+    console.log("binnen2")
   if (commands) commands.run(bot, message, arguments);
 
   //if (commands) commands.run(bot, message, arguments, Options);
