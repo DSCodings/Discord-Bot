@@ -32,7 +32,7 @@ bot.on("ready", async () => {
 
 bot.on("guildMemberAdd", member => {
 
-  var text = `Welkom to the server ${member}`;
+  var text = `Welkom to the server ${member}.`;
 
   const channel12 = member.guild.channels.find("name", "logs");
     if (!channel12) console.log("Kan het kanaal niet vinden.");
