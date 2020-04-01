@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
     console.log(reason);
     //if (!reason) return message.channel.send("give a text");
     message.channel.bulkDelete(1);
-    message.user124.send(reason);
+    user124.send(reason);
 
 }
 
