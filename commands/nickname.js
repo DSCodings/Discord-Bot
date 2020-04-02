@@ -24,9 +24,18 @@ module.exports.run = async(bot, message, args) => {
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
 
-    return message.channel.send(nicknameEmbed);
+    message.channel.send(nicknameEmbed);
+    var nicknameEmbed1 =  new discord.RichEmbed()
+      .setDescription("nick name successful changed")
+      .setColor("#29e53f")
+      .setThumbnail(message.guild.iconURL)
+      .addField("nickname successful changed to:", nickname)
+      .setTimestamp()
+      .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
-
+      let nicknamechannel = channel.guild.channels.find(x => x.name === "logs");
+      if (!nicknamechannel) return console.log("Kan het logs kanaal niet vinden.");
+      nicknamechannel.send(nicknameEmbed1);
 }
 
 module.exports.help = {
