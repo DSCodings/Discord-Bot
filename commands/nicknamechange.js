@@ -35,7 +35,7 @@ module.exports.run = async(bot, message, args) => {
       .setDescription("nick name successful changed")
       .setColor("#29e53f")
       .setThumbnail(message.guild.iconURL)
-      .addField(changenameUser.tag + " nickname successful changed to:", nickname)
+      .addField(changenameUser + " nickname successful changed to:", nickname)
       .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
