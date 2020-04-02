@@ -31,7 +31,6 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("🎉 **GIVEAWAY** 🎉")
         .setFooter(`Expires: ${dateTime}`)
         .setDescription(item)
-        .setTimestamp()
         .setFooter('Mady by jan0de0man', message.guild.iconURL);
  
     // Verzend embed en zet de reactie op de popper.
