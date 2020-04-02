@@ -6,6 +6,7 @@ module.exports.run = async (bot, message, args) => {
     var item = "";
     var time;
     var winnerCount;
+    message.channel.bulkDelete(1);
  
     // Nakijken als je perms hebt om dit command te doen.
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Sorry jij kan dit niet doen");
