@@ -10,9 +10,9 @@ module.exports.run = async(bot, message, args) => {
    
     
 
-    if (!nickname) return message.channel.send("<prefix>nicknamechange (user) (New nickname)");
+    if (!nickname) return message.channel.send("<prefix>verify (New nickname)");
     
-    message.guild.members.get(message.author).setNickname(nickname);
+    message.guild.members.get(message.author.id).setNickname(nickname);
 
     var nicknameEmbed =  new discord.RichEmbed()
       .setDescription("nick name successful changed")
