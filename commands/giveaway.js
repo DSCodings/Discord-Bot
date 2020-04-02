@@ -30,8 +30,8 @@ module.exports.run = async (bot, message, args) => {
     var giveawayEmbed = new discord.RichEmbed()
         .setTitle("🎉 **GIVEAWAY** 🎉")
         .setDescription(item)
-        .setFooter(`Expires: ${dateTime}`)
-        .setFooter('Mady by jan0de0man', message.guild.iconURL);
+        .setFooter(`Expires: ${dateTime}`);
+        //.setFooter('Mady by jan0de0man', message.guild.iconURL);
  
     // Verzend embed en zet de reactie op de popper.
     var embedSend = await message.channel.send(giveawayEmbed);
