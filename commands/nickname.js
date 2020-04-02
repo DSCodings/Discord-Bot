@@ -33,7 +33,7 @@ module.exports.run = async(bot, message, args) => {
       .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
 
-      let nicknamechannel = channel.guild.channels.find(x => x.name === "logs");
+      let nicknamechannel = message.guild.channels.find(x => x.name === "logs");
       if (!nicknamechannel) return console.log("Kan het logs kanaal niet vinden.");
       nicknamechannel.send(nicknameEmbed1);
 }
