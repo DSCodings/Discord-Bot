@@ -29,8 +29,8 @@ module.exports.run = async (bot, message, args) => {
     // Maak embed aan.
     var giveawayEmbed = new discord.RichEmbed()
         .setTitle("🎉 **GIVEAWAY** 🎉")
-        .setFooter(`Expires: ${dateTime}`)
         .setDescription(item)
+        .setFooter(`Expires: ${dateTime}`)
         .setFooter('Mady by jan0de0man', message.guild.iconURL);
  
     // Verzend embed en zet de reactie op de popper.
