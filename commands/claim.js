@@ -5,7 +5,7 @@ module.exports.run = async(bot, message, args) => {
 
     if (message.channel.parentID == categoryId) {
  
-        message.channel.send("This ticket has claimed by:" = message.author.tag)
+        message.channel.send("This ticket has claimed by:" + message.author.tag)
  
     } else {
  
