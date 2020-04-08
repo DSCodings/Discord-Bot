@@ -2,10 +2,10 @@ const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
     const categoryId = "667393377020411916";
-
+    message.channel.bulkDelete(1);
     if (message.channel.parentID == categoryId) {
  
-        message.channel.send("This ticket has claimed by:" + message.author.tag)
+        message.channel.send("This ticket has claimed by: " + message.author.tag)
  
     } else {
  
