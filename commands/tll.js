@@ -10,7 +10,8 @@ module.exports.run = async(bot, message, args) => {
     var count = 10 + 10;
     message.channel.send(count);
     message.channel.send("testendingtesten");
-    return message.channel.send(firsssst + second);
+    var somsin = firsssst + second
+    return message.channel.send(somsin);
     
 }
 
