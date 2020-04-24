@@ -16,5 +16,5 @@ module.exports.run = async(bot, message, args) => {
 
 module.exports.help = {
     name: "unclaim",
-    description: "for claim a ticket."
+    description: "for unclaim a ticket."
 }
