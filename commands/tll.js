@@ -12,7 +12,7 @@ module.exports.run = async(bot, message, args) => {
     message.channel.send("testendingtesten");
     var somsin = `${firsssst} + ${second}`
     var somsin22 = somsin
-    return message.channel.send(somsin);
+    return message.channel.send(somsin22);
     
 }
 
