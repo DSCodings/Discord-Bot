@@ -14,8 +14,279 @@ module.exports.run = async(bot, message, args) => {
     // var somsin22 = somsin
     // return message.channel.send(somsin22);
 
+    var resul = 0;
     if (args[0] == "1"){
-        message.channel.send("1");
+        if (args[1] == "1"){
+            if (args[2] == "1"){
+                if (args[3] == "1"){
+                    if (args[4] == "1"){
+                        if (args[5] == "1"){
+                            if (args[6] == "1"){
+                                if (args[7] == "1"){
+                                    if (args[8] == "1"){
+                                        if (args[9] == "1"){
+                                            resul = 10;
+                                    
+                                        }
+                                        else if (args[0] == "2"){
+                                            
+                                        }
+                                        else if (args[0] == "3"){
+                                            
+                                        }
+                                        else if (args[0] == "4"){
+                                            
+                                        }
+                                        else if (args[0] == "5"){
+                                            
+                                        }
+                                        else if (args[0] == "6"){
+                                            
+                                        }
+                                        else if (args[0] == "7"){
+                                            
+                                        }
+                                        else if (args[0] == "8"){
+                                            
+                                        }
+                                        else if (args[0] == "9"){
+                                            
+                                        }
+                                        else if (args[0] == "10"){
+                                            
+                                        }
+                                
+                                    }
+                                    else if (args[0] == "2"){
+                                        
+                                    }
+                                    else if (args[0] == "3"){
+                                        
+                                    }
+                                    else if (args[0] == "4"){
+                                        
+                                    }
+                                    else if (args[0] == "5"){
+                                        
+                                    }
+                                    else if (args[0] == "6"){
+                                        
+                                    }
+                                    else if (args[0] == "7"){
+                                        
+                                    }
+                                    else if (args[0] == "8"){
+                                        
+                                    }
+                                    else if (args[0] == "9"){
+                                        
+                                    }
+                                    else if (args[0] == "10"){
+                                        
+                                    }
+                            
+                                }
+                                else if (args[0] == "2"){
+                                    
+                                }
+                                else if (args[0] == "3"){
+                                    
+                                }
+                                else if (args[0] == "4"){
+                                    
+                                }
+                                else if (args[0] == "5"){
+                                    
+                                }
+                                else if (args[0] == "6"){
+                                    
+                                }
+                                else if (args[0] == "7"){
+                                    
+                                }
+                                else if (args[0] == "8"){
+                                    
+                                }
+                                else if (args[0] == "9"){
+                                    
+                                }
+                                else if (args[0] == "10"){
+                                    
+                                }
+                        
+                            }
+                            else if (args[0] == "2"){
+                                
+                            }
+                            else if (args[0] == "3"){
+                                
+                            }
+                            else if (args[0] == "4"){
+                                
+                            }
+                            else if (args[0] == "5"){
+                                
+                            }
+                            else if (args[0] == "6"){
+                                
+                            }
+                            else if (args[0] == "7"){
+                                
+                            }
+                            else if (args[0] == "8"){
+                                
+                            }
+                            else if (args[0] == "9"){
+                                
+                            }
+                            else if (args[0] == "10"){
+                                
+                            }
+                    
+                        }
+                        else if (args[0] == "2"){
+                            
+                        }
+                        else if (args[0] == "3"){
+                            
+                        }
+                        else if (args[0] == "4"){
+                            
+                        }
+                        else if (args[0] == "5"){
+                            
+                        }
+                        else if (args[0] == "6"){
+                            
+                        }
+                        else if (args[0] == "7"){
+                            
+                        }
+                        else if (args[0] == "8"){
+                            
+                        }
+                        else if (args[0] == "9"){
+                            
+                        }
+                        else if (args[0] == "10"){
+                            
+                        }
+                
+                    }
+                    else if (args[0] == "2"){
+                        
+                    }
+                    else if (args[0] == "3"){
+                        
+                    }
+                    else if (args[0] == "4"){
+                        
+                    }
+                    else if (args[0] == "5"){
+                        
+                    }
+                    else if (args[0] == "6"){
+                        
+                    }
+                    else if (args[0] == "7"){
+                        
+                    }
+                    else if (args[0] == "8"){
+                        
+                    }
+                    else if (args[0] == "9"){
+                        
+                    }
+                    else if (args[0] == "10"){
+                        
+                    }
+            
+                }
+                else if (args[0] == "2"){
+                    
+                }
+                else if (args[0] == "3"){
+                    
+                }
+                else if (args[0] == "4"){
+                    
+                }
+                else if (args[0] == "5"){
+                    
+                }
+                else if (args[0] == "6"){
+                    
+                }
+                else if (args[0] == "7"){
+                    
+                }
+                else if (args[0] == "8"){
+                    
+                }
+                else if (args[0] == "9"){
+                    
+                }
+                else if (args[0] == "10"){
+                    
+                }
+        
+            }
+            else if (args[0] == "2"){
+                
+            }
+            else if (args[0] == "3"){
+                
+            }
+            else if (args[0] == "4"){
+                
+            }
+            else if (args[0] == "5"){
+                
+            }
+            else if (args[0] == "6"){
+                
+            }
+            else if (args[0] == "7"){
+                
+            }
+            else if (args[0] == "8"){
+                
+            }
+            else if (args[0] == "9"){
+                
+            }
+            else if (args[0] == "10"){
+                
+            }
+    
+        }
+        else if (args[0] == "2"){
+            
+        }
+        else if (args[0] == "3"){
+            
+        }
+        else if (args[0] == "4"){
+            
+        }
+        else if (args[0] == "5"){
+            
+        }
+        else if (args[0] == "6"){
+            
+        }
+        else if (args[0] == "7"){
+            
+        }
+        else if (args[0] == "8"){
+            
+        }
+        else if (args[0] == "9"){
+            
+        }
+        else if (args[0] == "10"){
+            
+        }
 
     }
     else if (args[0] == "2"){
