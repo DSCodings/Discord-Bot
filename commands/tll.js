@@ -29,10 +29,10 @@ module.exports.run = async(bot, message, args) => {
                                     
                                         }
                                         else if (args[0] == "2"){
-                                            
+                                            resul = 11;
                                         }
                                         else if (args[0] == "3"){
-                                            
+                                            resul = 12;
                                         }
                                         else if (args[0] == "4"){
                                             
@@ -58,7 +58,37 @@ module.exports.run = async(bot, message, args) => {
                                 
                                     }
                                     else if (args[0] == "2"){
-                                        
+                                        if (args[7] == "1"){
+                                    message.channel.send("1");
+                            
+                                }
+                                else if (args[0] == "2"){
+                                    
+                                }
+                                else if (args[0] == "3"){
+                                    
+                                }
+                                else if (args[0] == "4"){
+                                    
+                                }
+                                else if (args[0] == "5"){
+                                    
+                                }
+                                else if (args[0] == "6"){
+                                    
+                                }
+                                else if (args[0] == "7"){
+                                    
+                                }
+                                else if (args[0] == "8"){
+                                    
+                                }
+                                else if (args[0] == "9"){
+                                    
+                                }
+                                else if (args[0] == "10"){
+                                    
+                                }
                                     }
                                     else if (args[0] == "3"){
                                         
@@ -316,6 +346,7 @@ module.exports.run = async(bot, message, args) => {
     else if (args[0] == "10"){
         
     }
+    message.channel.send(resul)
     
     
 }
