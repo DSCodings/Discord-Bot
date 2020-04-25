@@ -22,7 +22,7 @@ module.exports.run = async(bot, message, args) => {
     var test21235 = Number(firsssst) + Number(second) + Number(args[2]);
     message.channel.send(test21235);
 
-    var resul = 0;
+    // var resul = 0;
     // if (args[0] == "1"){
     //     if (args[1] == "1"){
     //         if (args[2] == "1"){
@@ -439,7 +439,7 @@ module.exports.run = async(bot, message, args) => {
     // else if (args[0] == "10"){
         
     // }
-    message.channel.send(resul);
+    // message.channel.send(resul);
     
     
 }
