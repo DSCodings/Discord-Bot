@@ -15,6 +15,7 @@ module.exports.run = async(bot, message, args) => {
     message.channel.send(somsin22);
     if (somsin22 == "22"){
         message.channel.send("22")
+        console.log("test")
     }
 
     var resul = 0;
