@@ -13,7 +13,7 @@ module.exports.run = async(bot, message, args) => {
     var somsin = `${firsssst} + ${second}`
     var somsin22 = somsin
     message.channel.send(somsin22);
-    if (somsin22 == 22){
+    if (somsin22 == "22"){
         message.channel.send("22")
     }
 
