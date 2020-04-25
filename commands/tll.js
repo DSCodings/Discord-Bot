@@ -16,9 +16,10 @@ module.exports.run = async(bot, message, args) => {
     var second = args[1];
     var firsssst = args[0];
     
+    
     console.log(firsssst);
     console.log(second);
-    var test21235 = Number(firsssst) + Number(second) + Number(args[3]);
+    var test21235 = Number(firsssst) + Number(second) + Number(args[2]);
     message.channel.send(test21235);
 
     var resul = 0;
