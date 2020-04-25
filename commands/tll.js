@@ -11,6 +11,9 @@ module.exports.run = async(bot, message, args) => {
     message.channel.send(count);
     message.channel.send("testendingtesten");
     var somsin = `${firsssst} + ${second}`
+    console.log(firsssst);
+    console.log(second)
+    var test = firsssst + second
     var somsin22 = somsin
     message.channel.send(somsin22);
     if (somsin22 == "22"){
