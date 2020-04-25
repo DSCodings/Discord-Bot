@@ -12,8 +12,11 @@ module.exports.run = async(bot, message, args) => {
     message.channel.send("testendingtesten");
     var somsin = `${firsssst} + ${second}`
     console.log(firsssst);
-    console.log(second)
-    var test = firsssst + second
+    console.log(second);
+    var test = firsssst + second;
+    var test21235 = Number(firsssst) + Number(second);
+    message.channel.send(test21235);
+    console.log(test21235);
     var somsin22 = somsin
     message.channel.send(somsin22);
     if (somsin22 == "22"){
