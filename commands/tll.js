@@ -3,26 +3,23 @@ const discord = require("discord.js");
 module.exports.run = async(bot, message, args) => {
     message.channel.send(count);
     //var first = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
-    if (!args[0]) return message.channel.send("Geef een argument mee");
-    if (!args[1]) return message.channel.send("Geef een argument mee");
-    var second = args[1]
-    var firsssst = args[0]
-    var count = 10 + 10;
-    message.channel.send(count);
-    message.channel.send("testendingtesten");
-    var somsin = `${firsssst} + ${second}`
+    // if (!args[0]) return message.channel.send("Geef een argument mee");
+    // if (!args[1]) return message.channel.send("Geef een argument mee");
+    // if (!args[2]) return message.channel.send("Geef een argument mee");
+    // if (!args[3]) return message.channel.send("Geef een argument mee");
+    // if (!args[4]) return message.channel.send("Geef een argument mee");
+    // if (!args[5]) return message.channel.send("Geef een argument mee");
+    // if (!args[6]) return message.channel.send("Geef een argument mee");
+    // if (!args[7]) return message.channel.send("Geef een argument mee");
+    // if (!args[8]) return message.channel.send("Geef een argument mee");
+    // if (!args[9]) return message.channel.send("Geef een argument mee");
+    var second = args[1];
+    var firsssst = args[0];
+    
     console.log(firsssst);
     console.log(second);
-    var test = firsssst + second;
-    var test21235 = Number(firsssst) + Number(second);
+    var test21235 = Number(firsssst) + Number(second) + Number(args[3]);
     message.channel.send(test21235);
-    console.log(test21235);
-    var somsin22 = somsin
-    message.channel.send(somsin22);
-    if (somsin22 == "22"){
-        message.channel.send("22")
-        console.log("test")
-    }
 
     var resul = 0;
     // if (args[0] == "1"){
