@@ -3,24 +3,25 @@ const discord = require("discord.js");
 module.exports.run = async(bot, message, args) => {
     //message.channel.send(count);
     //var first = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
-    // if (!args[0]) return message.channel.send("Geef een argument mee");
-    // if (!args[1]) return message.channel.send("Geef een argument mee");
-    // if (!args[2]) return message.channel.send("Geef een argument mee");
-    // if (!args[3]) return message.channel.send("Geef een argument mee");
-    // if (!args[4]) return message.channel.send("Geef een argument mee");
-    // if (!args[5]) return message.channel.send("Geef een argument mee");
-    // if (!args[6]) return message.channel.send("Geef een argument mee");
-    // if (!args[7]) return message.channel.send("Geef een argument mee");
-    // if (!args[8]) return message.channel.send("Geef een argument mee");
-    // if (!args[9]) return message.channel.send("Geef een argument mee");
+    // if (!args[0]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[1]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[2]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[3]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[4]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[5]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[6]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[7]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[8]) return message.channel.send("Geef 10 Getallen mee");
+    // if (!args[9]) return message.channel.send("Geef 10 Getallen mee");
     var second = args[1];
     var firsssst = args[0];
     
     
     console.log(firsssst);
     console.log(second);
-    var test21235 = Number(firsssst) + Number(second) + Number(args[2]);
-    message.channel.send(test21235);
+    
+    var geennaam = Number(firsssst) + Number(second) + Number(args[2]);
+    message.channel.send(geennaam);
 
     // var resul = 0;
     // if (args[0] == "1"){
