@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const moment = require('moment');
+//const moment = require('moment');
 
 module.exports.run = async(bot, message, args) => {
     let user = message.mentions.users.first() || message.author;
@@ -10,7 +10,7 @@ module.exports.run = async(bot, message, args) => {
         .setDescription(`${user}`)
         .setColor(`RANDOM`)
         .setThumbnail(`${user.displayAvatarURL}`)
-        .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Joined at:', user.joinedAt)
         .addField('Status:', user.presence.status, true)
         .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
         .setFooter(`ID: ${user.id}`)
