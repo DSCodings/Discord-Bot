@@ -21,8 +21,8 @@ module.exports.run = async(bot, message, args) => {
         .addField("In Server", message.guild.name, true)
         .addField("Game:", `${user.presence.game ? user.presence.game.name : 'None'}`, true)
         .addField("Bot:", `${user.bot}`, true)
-        .addField("Joined The Server On:", user.joinedAt
-        .addField("Account Created On:", user.createdAt 
+        .addField("Joined The Server On:", user.joinedAt)
+        .addField("Account Created On:", user.createdAt) 
         .addField("Roles:", member.roles.map(roles => `${roles}`).join(', '), true)
         .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
     message.channel.send({embed});
