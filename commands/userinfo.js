@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const moment = require('moment');
+//const moment = require('moment');
 
 module.exports.run = async(bot, message, args) => {
     let user;
@@ -21,8 +21,8 @@ module.exports.run = async(bot, message, args) => {
         .addField("In Server", message.guild.name, true)
         .addField("Game:", `${user.presence.game ? user.presence.game.name : 'None'}`, true)
         .addField("Bot:", `${user.bot}`, true)
-        .addField("Joined The Server On:", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY")}`, true)
-        .addField("Account Created On:", `${moment.utc(user.createdAt).format("dddd, MMMM Do YYYY")}`, true) 
+        //.addField("Joined The Server On:", `${moment.utc(member.joinedAt).format("dddd, MMMM Do YYYY")}`, true)
+       // .addField("Account Created On:", `${moment.utc(user.createdAt).format("dddd, MMMM Do YYYY")}`, true) 
         .addField("Roles:", member.roles.map(roles => `${roles}`).join(', '), true)
         .setFooter(`Replying to ${message.author.username}#${message.author.discriminator}`)
     message.channel.send({embed});
