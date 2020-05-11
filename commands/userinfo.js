@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-//const moment = require('moment');
+const moment = require('moment');
 
 module.exports.run = async(bot, message, args) => {
     let user;
@@ -11,7 +11,7 @@ module.exports.run = async(bot, message, args) => {
     
     const member = message.guild.member(user);
     
-    const embed = new Discord.RichEmbed()
+    const embed = new discord.RichEmbed()
         .setColor("RANDOM")
         .setThumbnail(message.author.avatarURL)
         .addField(`${user.tag}`, `${user}`, true)
