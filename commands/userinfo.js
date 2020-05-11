@@ -1,36 +1,26 @@
 const discord = require("discord.js");
+const moment = require('moment');
 
 module.exports.run = async(bot, message, args) => {
-    let user = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
-    if (!user) user = message.author;
-
-    let userinfo = {};
-    //userinfo.avatar = user.author.avatarURL;
-    userinfo.name = user.username;
-    userinfo.discrim = `#${user.discriminator}` ;
-    userinfo.id = user.id;
-    userinfo.status = user.presence.status;
-    userinfo.registered = user.createdAt; //moment.utc(message.guild.member.get(user.id).user.createdAt).format("dddd, MMMM Do. YYYY");
-    userinfo.joined = user.joinedAt; // ..joinedAt ///moment.utc(message.guild.members.get(user.id).joinedAt).format("dddd, MMMM Do, YYYY")
-
-
-    
+    let user = message.mentions.users.first() || message.author;
+    const joinDiscord = moment(user.createdAt).format('llll');
+    const joinServer = moment(user.joinedAt).format('llll');
     let embed = new discord.RichEmbed()
-        //.setAuthor(user.tag, userinfo.avatar) 
-        .setThumbnail(userinfo.avatar)
-        .addField('Username', userinfo.name, true) 
-        .addField('Discriminator', userinfo.discrim, true)
-        .addField('ID', userinfo.id, true) 
-        .addField("status", userinfo.status, true)
-        .addField("Registered", userinfo.registered)
-        .addField("Joined", userinfo.joined)
-        .setColor(0xffffff);
-        
-    return message.channel.send(embed); //Send the embed we just created
-    
+        .setAuthor(user.username + '#' + user.discriminator, user.displayAvatarURL)
+        .setDescription(`${user}`)
+        .setColor(`RANDOM`)
+        .setThumbnail(`${user.displayAvatarURL}`)
+        .addField('Joined at:', `${moment.utc(user.joinedAt).format('dddd, MMMM Do YYYY, HH:mm:ss')}`, true)
+        .addField('Status:', user.presence.status, true)
+        .addField('Roles:', user.roles.map(r => `${r}`).join(' | '), true)
+        .setFooter(`ID: ${user.id}`)
+        .setTimestamp();
+
+    message.channel.send({ embed: embed });
+    return;
 }
 
 module.exports.help = {
-    name: "whios",
-    description: "for test the bot"
+    name: "userinfo",
+    description: "userinfo"
 }
