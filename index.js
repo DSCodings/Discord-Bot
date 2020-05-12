@@ -84,10 +84,7 @@ bot.on("guildMemberRemove", member => {
   channel1.send(leaveEmbed);
 });
 
-bot.fetchAuditLogs({type: 'MEMBER_UPDATE', user: 'DESIRED USER ID'}).then(async (audit) => {
-  let log = audit.entries.first().changes
-  console.log(log)
-});
+
 
 // bot.on("guildBanAdd", (Userbanned) => {
 //   // const channel123 = member.guild.channels.find("name", "logs");
