@@ -8,11 +8,11 @@ module.exports.run = async(bot, message, args) => {
         .setTimestamp();
 
         message.channel.send(giveawayEmbedgg);
-        message.react('🍇');
+        giveawayEmbedgg.react('👍🍇');
 
-        if (message.content === '!react') {
-            message.react('👍');
-        }
+        // if (message.content === '!react') {
+        //     message.react('👍');
+        // }
         if (reaction.emoji.name === '👍') {
                message.reply('you reacted with a thumbs up.');
           }
