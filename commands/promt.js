@@ -7,7 +7,7 @@ module.exports.run = async(bot, message, args) => {
         .setFooter('Mady by jan0de0man', message.guild.iconURL)
         .setTimestamp();
         var embedSendq = await message.channel.send(giveawayEmbedgg);
-        embedSendq.react("👍 👎");
+        embedSendq.react("👍", "👎");
 
         const filter = (reaction, user) => {
             return ['👍', '👎'].includes(reaction.emoji.name) && user.id === message.author.id;
