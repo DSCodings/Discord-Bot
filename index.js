@@ -84,6 +84,11 @@ bot.on("guildMemberRemove", member => {
   channel1.send(leaveEmbed);
 });
 
+message.guild.fetchAuditLogs({type: 'MEMBER_UPDATE', user: 'DESIRED USER ID'}).then(async (audit) => {
+  let log = audit.entries.first().changes
+  console.log(log)
+});
+
 // bot.on("guildBanAdd", (Userbanned) => {
 //   // const channel123 = member.guild.channels.find("name", "logs");
 //   // if (!channel123) console.log("Kan het kanaal niet vinden.");
