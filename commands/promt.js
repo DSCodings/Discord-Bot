@@ -15,9 +15,17 @@ module.exports.run = async(bot, message, args) => {
         // if (message.content === '!react') {
         //     message.react('👍');
         // }
-        if (reaction.emoji.name === '👍') {
-               message.reply('you reacted with a thumbs up.');
-          }
+        // if (reaction.emoji.name === '👍') {
+        //        message.reply('you reacted with a thumbs up.');
+        //   }
+    message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+	.then(collected => {
+		const reaction = collected.first();
+
+		if (reaction.emoji.name === '👍') {
+			message.reply('you reacted with a thumbs up.');
+		} 
+	})
 
 
 
