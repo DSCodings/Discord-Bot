@@ -8,7 +8,7 @@ module.exports.run = async(bot, message, args) => {
         .setTimestamp();
 
         message.channel.send(giveawayEmbedgg);
-        giveawayEmbedgg.react('👍🍇');
+        giveawayEmbedgg.react('👍');
 
         // if (message.content === '!react') {
         //     message.react('👍');
