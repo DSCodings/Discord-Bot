@@ -29,7 +29,9 @@ module.exports.run = async(bot, message, args) => {
 		if (reaction.emoji.name === '👍') {
 			message.reply('you reacted with a thumbs up.');
 		} 
-	})
+	}).catch(collected => {
+		message.reply('you reacted with neither a thumbs up, nor a thumbs down.');
+	});
 
 
 
