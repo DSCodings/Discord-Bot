@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args) => {
         .setTitle("**check**")
         .setFooter('Mady by jan0de0man', message.guild.iconURL)
         .setTimestamp();
-        var embedSendq = await message.channel.send(giveawayEmbedGG);
+        var embedSendq = await message.channel.send(giveawayEmbedgg);
         embedSendq.react("👍");
 
         // message.channel.send(giveawayEmbedgg);
