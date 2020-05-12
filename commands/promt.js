@@ -9,8 +9,8 @@ module.exports.run = async(bot, message, args) => {
         var embedSendq = await message.channel.send(giveawayEmbedGG);
         embedSendq.react("👍");
 
-        message.channel.send(giveawayEmbedgg);
-        giveawayEmbedgg.react('👍');
+        // message.channel.send(giveawayEmbedgg);
+        // giveawayEmbedgg.react('👍');
 
         // if (message.content === '!react') {
         //     message.react('👍');
