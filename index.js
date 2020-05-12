@@ -84,7 +84,7 @@ bot.on("guildMemberRemove", member => {
   channel1.send(leaveEmbed);
 });
 
-message.guild.fetchAuditLogs({type: 'MEMBER_UPDATE', user: 'DESIRED USER ID'}).then(async (audit) => {
+bot.fetchAuditLogs({type: 'MEMBER_UPDATE', user: 'DESIRED USER ID'}).then(async (audit) => {
   let log = audit.entries.first().changes
   console.log(log)
 });
