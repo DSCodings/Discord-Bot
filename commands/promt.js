@@ -22,7 +22,7 @@ module.exports.run = async(bot, message, args) => {
         // if (reaction.emoji.name === '👍') {
         //        message.reply('you reacted with a thumbs up.');
         //   }
-    message.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] })
+    message.awaitReactions(filter, { max: 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999, time: 10, errors: ['time'] })
 	.then(collected => {
 		const reaction = collected.first();
 
