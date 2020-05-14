@@ -33,8 +33,6 @@ module.exports.run = async(bot, message, args) => {
 		message.reply('you reacted with neither a thumbs up, nor a thumbs down.');
 	});
 
-
-
 }
 
 module.exports.help = {
