@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 
 });
 
-bot.on("ready", async () => {
+bot.on("ready", async (member) => {
     console.log(`${bot.user.username} is online!`);
 
     bot.user.setActivity("De controle", {type: "playing"});
