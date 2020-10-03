@@ -29,11 +29,7 @@ bot.on("ready", async (ready) => {
 
     bot.user.setActivity("De controle", {type: "playing"});
 
-    console.log(`Test`);
-    //let channel91 = channel.guild.channels.find(x => x.name === `logs`);
-    let channel91 = ready.guild.channels.find(x => x.name === "logs");
-    if (!channel91) return;
-    channel91.send(`test`);
+    
     
 });
 
