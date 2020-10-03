@@ -28,8 +28,8 @@ bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`);
 
     bot.user.setActivity("De controle", {type: "playing"});
-    const channel12 = member.guild.channels.find("name", "logs");
-    if (!channel12) console.log("Kan het kanaal niet vinden.");
+    let Readychannal = role.guild.channels.find(x => x.name === "logs");
+    if (!Readychannal) console.log("Kan het kanaal niet vinden.");
  
     var joinEmbed = new discord.RichEmbed()
         .setTitle("**Bot back online/updated!**")
@@ -37,13 +37,9 @@ bot.on("ready", async () => {
         .setTimestamp()
         .setFooter('Mady by jan0de0man');
  
-    channel12.send(joinEmbed);
+        Readychannal.send(joinEmbed);
 
-    member.send(text).catch(() => {
-
-      console.log("**")
-
-    });
+    
 });
 
 bot.on("guildMemberAdd", member => {
