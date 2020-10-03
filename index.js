@@ -33,7 +33,7 @@ bot.on("ready", async () => {
     let channel91 = channel.guild.channels.find(x => x.name === "logs");
 
     if (!channel91) return;
-    channel91.send(`Welcome to the server ${member}.`);
+    channel91.send(`test`);
     
 });
 
