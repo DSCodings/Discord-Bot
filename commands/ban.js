@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports.run = async(bot, message, arguments) => {
     var banUser = message.guild.member(message.mentions.users.first() || message.guild.member(arguments[0]));
 
-    if (!banUser) return message.channel.send("use was not found");
+    if (!banUser) return message.channel.send("user was not found");
 
     var reason = arguments.join(" ").slice(22);
 
