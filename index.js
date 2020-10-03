@@ -169,7 +169,9 @@ bot.on("channelCreate",async (channel) => {
   let createchannelEmbed = new discord.RichEmbed()
     .setTitle("**CHANNEL_CREATED**")
     .setColor("#00FF00")
-    .setDescription("Channel Name: " + channel.name + " Has created with Type: " + channel.type);
+    .setDescription("Channel Name: " + channel.name + " Has created with Type: " + channel.type)
+    .setTimestamp()
+    .setFooter('Mady by jan0de0man');
 
   let createchannelChannel = channel.guild.channels.find(x => x.name === "logs");
   if(!createchannelChannel) return console.log("Kan het kanaal niet vinden.");
@@ -180,7 +182,9 @@ bot.on("channelDelete",async (channel) => {
   let DeletechannelEmbed = new discord.RichEmbed()
     .setTitle("**CHANNEL_DELETED**")
     .setColor("#fc3c3c")
-    .setDescription("Channel Name: " + channel.name + " Has Deleted with Type: " + channel.type);
+    .setDescription("Channel Name: " + channel.name + " Has Deleted with Type: " + channel.type)
+    .setTimestamp()
+    .setFooter('Mady by jan0de0man');
 
   let DeletechannelChannel = channel.guild.channels.find(x => x.name === "logs");
   if(!DeletechannelChannel) return console.log("Kan het kanaal niet vinden.");
