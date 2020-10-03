@@ -29,20 +29,6 @@ bot.on("ready", async () => {
 
     bot.user.setActivity("De controle", {type: "playing"});
 
-    console.Log("test");
-    /*let Readychannal = role.guild.channels.find(x => x.name === "logs");
-    let LOG129Embed = new discord.RichEmbed()
-  .setColor("#ff6a00")
-  .setDescription("**ROL EDITED**")
-  .addField("Old name", oldRole.name, true)
-  .addField("New name", newRole.name, true)
-  .setTimestamp()
-  .setFooter('Mady by jan0de0man');
-
-  let loggingCHanne129l = newRole.guild.channels.find(ch => ch.name === "logs");
-  if(!loggingCHanne129l) return console.log("Kan het kanaal niet vinden.");
-
-  loggingCHanne129l.send(LOG129Embed);*/
 
     
 });
