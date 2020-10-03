@@ -29,6 +29,8 @@ bot.on("ready", async () => {
 
     bot.user.setActivity("De controle", {type: "playing"});
 
+    console.log(`Test`);
+
 
     
 });
