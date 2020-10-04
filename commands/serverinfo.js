@@ -19,7 +19,6 @@ module.exports.run = async(bot, message, args) => {
       .addField("Your id:", message.author.id)
       .addField("Channals", message.guild.channels.size)
       .addField("roles", message.guild.roles.size)
-      .addField("Verification Level", verifLevels[message.guild.verificationLevel])
       .addField("Creation Date", `${message.channel.guild.createdAt.toUTCString().substr(0, 16)} (${checkDays(message.channel.guild.createdAt)})`)
       .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
