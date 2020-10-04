@@ -13,7 +13,7 @@ module.exports.run = async(bot, message, args) => {
       .addField("Bot name", bot.user.username)
       .addField("you are joined on", message.member.joinedAt)
       .addField("members", message.guild.memberCount)
-      .addField("Owner", owner.user.username)
+      .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)
       .addField("Region", region)
       .addField("Your name:", message.author.username)
       .addField("Your id:", message.author.id)
