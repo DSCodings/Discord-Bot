@@ -14,7 +14,7 @@ module.exports.run = async(bot, message, args) => {
       .addField("you are joined on", message.member.joinedAt)
       .addField("members", message.guild.memberCount)
       .addField("Owner", `${message.guild.owner.user.username}#${message.guild.owner.user.discriminator}`)
-      .addField("Region", region)
+      .addField("Region", region[message.guild.region])
       .addField("Your name:", message.author.username)
       .addField("Your id:", message.author.id)
       .setTimestamp()
