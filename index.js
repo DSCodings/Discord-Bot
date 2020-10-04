@@ -28,7 +28,7 @@ bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`);
 
     bot.user.setActivity("De controle", {type: "playing"});
-    bot.user.setStatus("offline")
+    //bot.user.setStatus("offline")
     
     
 });
