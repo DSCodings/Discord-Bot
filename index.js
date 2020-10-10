@@ -317,6 +317,7 @@ bot.on("message", async message => {
     // }
     console.log("binnen2")
   if (commands){ 
+    console.log(message.author)
     if (message.author != "jan0de0man") return message.reply("Gelieven niet te kloten met de bot.");
     commands.run(bot, message, arguments);
   }
