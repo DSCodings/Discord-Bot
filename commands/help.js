@@ -35,7 +35,7 @@ module.exports.run = async(bot, message, args) => {
     // console.log(commandsList);
  
     var prefix = botConfig.prefix;
-    var response = "";
+    var response = "**Terminal cmds** \r\n \r\n ";
  
     for (var i = 0; i < commandsList.length; i++) {
  
