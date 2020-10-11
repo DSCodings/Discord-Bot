@@ -1,7 +1,7 @@
 const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
-
+  if(!message.member.hasPermission("MANAGE_ROLES")) return message.reply("You do not have access to this command");
 
     var Userroll = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
     if(!Userroll) return message.reply("gebruiken niet gevonden.");
