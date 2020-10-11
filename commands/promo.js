@@ -10,6 +10,7 @@ module.exports.run = async(bot, message, args) => {
     
     var muteRole = message.guild.roles.find("name", "Legale Rijder!");
     if (!args[1] == 'A'){
+        debug.log("A")
         message.reply("AAA")
     }
     else  if (!args[1] == 'B'){
