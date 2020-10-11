@@ -11,23 +11,23 @@ module.exports.run = async(bot, message, args) => {
     var muteRole = message.guild.roles.find("name", "Legale Rijder!");
     if (args[1] == 'A'){
         var muteRole1 = message.guild.roles.find("name", "Rijbewijs A (Motor)");
-        message.reply("AAA");
+      //  message.reply("AAA");
     }
     else  if (args[1] == 'B'){
         var muteRole1 = message.guild.roles.find("name", "Rijbewijs B (Auto)");
-        message.reply("BBBB");
+       // message.reply("BBBB");
     }
     else  if (args[1] == 'C'){
         var muteRole1 = message.guild.roles.find("name", "Rijbewijs C (Vrachtwagens)");
-        message.reply("CCCC");
+     //   message.reply("CCCC");
     }
     else  if (args[1] == 'D'){
         var muteRole1 = message.guild.roles.find("name", "Rijbewijs D (Bus)");
-        message.reply("DDDD");
+       // message.reply("DDDD");
     }
    // var muteRole1 = message.guild.roles.find("name", "Legale Rijder!");
 
-  //  Userroll.addRole(muteRole);
+    Userroll.addRole(muteRole);
     Userroll.addRole(muteRole1);
     
     var stringEmbed = new discord.RichEmbed()
