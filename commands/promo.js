@@ -31,7 +31,7 @@ module.exports.run = async(bot, message, args) => {
     Userroll.addRole(muteRole1);
     
     var stringEmbed = new discord.RichEmbed()
-      .setColor("#ff0000")
+      .setColor("#00FF00")
       .setTitle("**Promotie!**")
       .setDescription(`${args[0]} heeft suc6vol rijbewijs ${args[1]} gekregen.`)
       .setTimestamp()
