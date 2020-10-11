@@ -1,17 +1,16 @@
 const discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
-    if (!message.authorh.roles.has == "Peepsman Founders") {
-        return message.reply("Je hebt de rol niet.");
-    }
-    message.reply("succes");
-   // let Grole = message.mentions.roles.first();
 
+
+    var Userroll = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
+    if(!Userroll) return message.reply("Couldn't find that user!");
+    var roleName = args.join(" ").slice(22);
+    console.log(roleName);
+    if(!roleName) return message.channel.send("<prefix>Promotie (Name) (roll)");
     
-   // if(!Grole) return message.reply("Couldn't find that role.");
 
-   // Userroll.addRole(Grole);
-
+    Userroll.addRole("Muted");
     
 
    
