@@ -10,12 +10,20 @@ module.exports.run = async(bot, message, args) => {
 
     Userroll.addRole(muteRole);
     
+    var stringEmbed = new discord.RichEmbed()
+      .setColor("#ff0000")
+      .setTitle("**Promotie!**")
+      .setDescription(`${args[0]} heeft suc6 vol de rank legale rijder gekregen.`)
+      .setTimestamp()
+      .setFooter('Mady by jan0de0man', message.guild.iconURL);
+    
 
+    message.channel.send(stringEmbed);
    
     
 }
 
 module.exports.help = {
-    name: "Promotie",
+    name: "geslaagd",
     description: "Promotie"
 }
