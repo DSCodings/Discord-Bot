@@ -9,17 +9,17 @@ module.exports.run = async(bot, message, args) => {
     if (!args[1]) return message.reply("Geef een rijbewijs mee, A, B, C of D.")
     
     var muteRole = message.guild.roles.find("name", "Legale Rijder!");
-    if (!args[1] == 'A'){
+    if (args[1] == 'A'){
         debug.log("A")
         message.reply("AAA")
     }
-    else  if (!args[1] == 'B'){
+    else  if (args[1] == 'B'){
         message.reply("BBBB")
     }
-    else  if (!args[1] == 'C'){
+    else  if (args[1] == 'C'){
         message.reply("CCCC")
     }
-    else  if (!args[1] == 'D'){
+    else  if (args[1] == 'D'){
         message.reply("DDDD")
     }
     var muteRole1 = message.guild.roles.find("name", "Legale Rijder!");
@@ -30,7 +30,7 @@ module.exports.run = async(bot, message, args) => {
     var stringEmbed = new discord.RichEmbed()
       .setColor("#ff0000")
       .setTitle("**Promotie!**")
-      .setDescription(`${args[0]} heeft suc6 vol de Rijbewijs ${args[1]} gekregen.`)
+      .setDescription(`${args[0]} heeft suc6vol rijbewijs ${args[1]} gekregen.`)
       .setTimestamp()
       .setFooter('Mady by jan0de0man', message.guild.iconURL);
     
