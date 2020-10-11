@@ -6,9 +6,9 @@ module.exports.run = async(bot, message, args) => {
     var Userroll = message.guild.member(message.mentions.users.first() || message.guild.member(args[0]));
     if(!Userroll) return message.reply("Couldn't find that user!");
     
-    
+    var muteRole = message.guild.roles.find("name", "Muted");
 
-    Userroll.addRole("Muted");
+    Userroll.addRole(muteRole);
     
 
    
