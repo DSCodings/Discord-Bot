@@ -10,22 +10,22 @@ module.exports.run = async(bot, message, args) => {
     
     var muteRole = message.guild.roles.find("name", "Legale Rijder!");
     if (args[1] == 'A'){
-        debug.log("A")
-        message.reply("AAA")
+       
+        message.reply("AAA");
     }
     else  if (args[1] == 'B'){
-        message.reply("BBBB")
+        message.reply("BBBB");
     }
     else  if (args[1] == 'C'){
-        message.reply("CCCC")
+        message.reply("CCCC");
     }
     else  if (args[1] == 'D'){
-        message.reply("DDDD")
+        message.reply("DDDD");
     }
-    var muteRole1 = message.guild.roles.find("name", "Legale Rijder!");
+   // var muteRole1 = message.guild.roles.find("name", "Legale Rijder!");
 
-    Userroll.addRole(muteRole);
-    Userroll.addRole(muteRole);
+  //  Userroll.addRole(muteRole);
+  //  Userroll.addRole(muteRole);
     
     var stringEmbed = new discord.RichEmbed()
       .setColor("#ff0000")
