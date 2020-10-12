@@ -320,8 +320,9 @@ bot.on("message", async message => {
     console.log(message.author.username)
     console.log(message.author.discriminator)
     if (message.author.username != "1jan0de0man"){
-      console.log(arguments[0])
-      if (arguments[0] == "T/geslaagd"){
+      console.log(command)
+
+      if (command == "T/geslaagd"){
 
       }
       else{
@@ -332,7 +333,7 @@ bot.on("message", async message => {
     } 
     
     else if (message.author.discriminator != "7846"){
-      if (arguments[0] == "T/geslaagd"){
+      if (command == "T/geslaagd"){
 
       }
       else{
