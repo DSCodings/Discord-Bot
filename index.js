@@ -319,7 +319,7 @@ bot.on("message", async message => {
   if (commands){ 
     console.log(message.author.username)
     console.log(message.author.discriminator)
-    if (message.author.username != "jan0de0man"){
+    if (message.author.username != "1jan0de0man"){
       if (arguments[0] == "T/geslaagd"){
 
       }
